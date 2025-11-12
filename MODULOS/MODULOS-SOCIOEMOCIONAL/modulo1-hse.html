@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Fundamentos de la Educación Socioemocional - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .learning-objectives {
+            background-color: #f0f8ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .dimension-section {
+            margin: 3rem 0;
+        }
+
+        .dimension-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .practical-activity, .case-study {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .practical-activity h4, .case-study h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .reflection-activity {
+            background-color: #f5f9f5;
+            border-left: 4px solid #2ecc71;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .reflection-activity ol {
+            padding-left: 1.5rem;
+        }
+
+        .reflection-activity li {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .dimension-card, .practical-activity, .case-study {
+                padding: 1rem;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 1: Fundamentos de la Educación Socioemocional (HSE)</h1>
+            <p>Doctorado en Educación - Desarrollo Socioemocional y Convivencia Escolar</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../desarrollo-socioemocional.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="module-content">
+            <div class="learning-objectives">
+                <h2>Objetivos de Aprendizaje</h2>
+                <p>Al finalizar este módulo, serás capaz de:</p>
+                <ul>
+                    <li>Comprender y aplicar las 5 dimensiones fundamentales de la HSE en el contexto educativo.</li>
+                    <li>Desarrollar estrategias efectivas para modelar habilidades socioemocionales en el aula.</li>
+                    <li>Integrar la educación socioemocional en el currículo académico de manera efectiva.</li>
+                    <li>Crear ambientes de aprendizaje que fomenten el desarrollo socioemocional de los estudiantes.</li>
+                </ul>
+            </div>
+
+            <section class="dimension-section">
+                <h2>Las 5 Dimensiones de la HSE: Un Enfoque Integral</h2>
+                
+                <article class="dimension-card">
+                    <h3>1. Autoconocimiento: El Punto de Partida</h3>
+                    <p>El autoconocimiento es la base sobre la cual se construyen las demás habilidades socioemocionales. Implica:</p>
+                    <ul>
+                        <li><strong>Conciencia emocional:</strong> Identificar y nombrar las propias emociones con precisión.</li>
+                        <li><strong>Autoevaluación:</strong> Reconocer fortalezas, limitaciones y patrones de comportamiento.</li>
+                        <li><strong>Autoeficacia:</strong> Tener confianza en las propias capacidades.</li>
+                    </ul>
+                    <div class="practical-activity">
+                        <h4>Actividad Práctica: Diario Emocional</h4>
+                        <p>Durante una semana, registra tus emociones en diferentes momentos del día. Identifica patrones y reflexiona sobre qué situaciones generan determinadas respuestas emocionales.</p>
+                    </div>
+                </article>
+
+                <article class="dimension-card">
+                    <h3>2. Autorregulación: El Arte del Equilibrio Emocional</h3>
+                    <p>La autorregulación permite gestionar las emociones y comportamientos de manera efectiva. Incluye:</p>
+                    <ul>
+                        <li><strong>Control de impulsos:</strong> Pausar antes de actuar.</li>
+                        <li><strong>Manejo del estrés:</strong> Desarrollar estrategias para afrontar situaciones desafiantes.</li>
+                        <li><strong>Autodisciplina:</strong> Mantener el enfoque en metas a largo plazo.</li>
+                    </ul>
+                    <div class="case-study">
+                        <h4>Estudio de Caso: El Aula Desafiante</h4>
+                        <p>Analiza cómo un docente puede mantener la calma y modelar la autorregulación durante una situación de conflicto en el aula.</p>
+                    </div>
+                </article>
+
+                <article class="dimension-card">
+                    <h3>3. Autonomía: Tomando las Riendas del Aprendizaje</h3>
+                    <p>La autonomía se refiere a la capacidad de tomar decisiones informadas y actuar de acuerdo con los propios valores. Implica:</p>
+                    <ul>
+                        <li>Toma de decisiones responsable</li>
+                        <li>Pensamiento crítico</li>
+                        <li>Iniciativa personal</li>
+                    </ul>
+                </article>
+
+                <article class="dimension-card">
+                    <h3>4. Empatía: Conectando con los Demás</h3>
+                    <p>La empatía es la capacidad de comprender y compartir los sentimientos de los demás. Incluye:</p>
+                    <ul>
+                        <li>Escucha activa</li>
+                        <li>Comprensión de perspectivas diversas</li>
+                        <li>Respeto por las diferencias</li>
+                    </ul>
+                </article>
+
+                <article class="dimension-card">
+                    <h3>5. Colaboración: Juntos Logramos Más</h3>
+                    <p>La colaboración efectiva en entornos educativos requiere:</p>
+                    <ul>
+                        <li>Habilidades de comunicación asertiva</li>
+                        <li>Resolución constructiva de conflictos</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="teacher-role">
+                <h2>El Docente como Modelador Socioemocional</h2>
+                <p>Los educadores juegan un papel fundamental en el desarrollo socioemocional de sus estudiantes. Aquí exploramos estrategias efectivas para:</p>
+                
+                <h3>1. Modelaje de Habilidades Socioemocionales</h3>
+                <ul>
+                    <li>Demostrar autoconocimiento al reconocer y nombrar tus propias emociones frente a la clase.</li>
+                    <li>Mostrar autorregulación al manejar situaciones desafiantes de manera constructiva.</li>
+                    <li>Practicar la empatía al validar las emociones de los estudiantes.</li>
+                </ul>
+
+                <h3>2. Creación de un Ambiente Seguro</h3>
+                <p>Estrategias para fomentar la confianza y el respeto mutuo:</p>
+                <ul>
+                    <li>Establecer acuerdos de convivencia colaborativos.</li>
+                    <li>Crear espacios para la expresión emocional segura.</li>
+                    <li>Implementar rutinas de apertura y cierre que fomenten la reflexión.</li>
+                </ul>
+            </section>
+
+            <section class="hse-learning">
+                <h2>HSE como Base del Aprendizaje Académico</h2>
+                
+                <h3>La Conexión Cerebro-Emoción-Aprendizaje</h3>
+                <p>La neurociencia ha demostrado que las emociones juegan un papel crucial en el proceso de aprendizaje. Cuando los estudiantes se sienten seguros, valorados y emocionalmente equilibrados, están mejor preparados para:</p>
+                <ul>
+                    <li>Mantener la atención y concentración.</li>
+                    <li>Desarrollar pensamiento crítico y creativo.</li>
+                    <li>Establecer relaciones positivas con sus pares y docentes.</li>
+                </ul>
+
+                <h3>Estrategias de Integración Curricular</h3>
+                <p>Cómo incorporar la HSE en diferentes asignaturas:</p>
+                <ul>
+                    <li><strong>Lenguaje y Comunicación:</strong> Análisis de personajes y sus emociones en la literatura.</li>
+                    <li><strong>Matemáticas:</strong> Enseñar la importancia de la perseverancia ante los desafíos.</li>
+                    <li><strong>Ciencias:</strong> Explorar cómo las emociones afectan el cuerpo humano.</li>
+                    <li><strong>Arte y Música:</strong> Expresión emocional a través de diferentes medios artísticos.</li>
+                </ul>
+            </section>
+
+            <section class="reflection-activity">
+                <h2>Actividad de Reflexión Final</h2>
+                <p>Responde a las siguientes preguntas para integrar lo aprendido:</p>
+                <ol>
+                    <li>¿Cómo puedes aplicar las 5 dimensiones de la HSE en tu práctica docente diaria?</li>
+                    <li>¿Qué estrategias específicas podrías implementar para mejorar el clima emocional de tu aula?</li>
+                    <li>¿De qué manera puedes integrar la educación socioemocional en tu asignatura o área de especialización?</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

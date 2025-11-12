@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Prevención de la Violencia y el Acoso Escolar - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .learning-objectives {
+            background-color: #f0f8ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .strategy-section {
+            margin: 3rem 0;
+        }
+
+        .strategy-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .practical-activity, .case-study {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .practical-activity h4, .case-study h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .reflection-activity {
+            background-color: #f5f9f5;
+            border-left: 4px solid #2ecc71;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .reflection-activity ol {
+            padding-left: 1.5rem;
+        }
+
+        .reflection-activity li {
+            margin-bottom: 1rem;
+        }
+
+        .step-by-step {
+            background-color: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .checklist {
+            background-color: #f0f7ff;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem 1rem 3rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .checklist:before {
+            content: "✓";
+            position: absolute;
+            left: 1rem;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .strategy-card, .practical-activity, .case-study, .step-by-step, .checklist {
+                padding: 1rem;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 3: Prevención de la Violencia y el Acoso Escolar</h1>
+            <p>Doctorado en Educación - Desarrollo Socioemocional y Convivencia Escolar</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../desarrollo-socioemocional.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="module-content">
+            <div class="learning-objectives">
+                <h2>Objetivos de Aprendizaje</h2>
+                <p>Al finalizar este módulo, serás capaz de:</p>
+                <ul>
+                    <li>Implementar protocolos efectivos para prevenir y atender casos de violencia y acoso escolar.</li>
+                    <li>Facilitar procesos de construcción colaborativa de acuerdos de convivencia.</li>
+                    <li>Aplicar estrategias de mediación y resolución pacífica de conflictos en el ámbito educativo.</li>
+                    <li>Diseñar intervenciones basadas en evidencia para promover una cultura de paz escolar.</li>
+                </ul>
+            </div>
+
+            <section class="strategy-section">
+                <h2>Protocolos de Prevención y Atención de la Violencia y el Acoso</h2>
+                
+                <article class="strategy-card">
+                    <h3>Marco Normativo y Conceptual</h3>
+                    <p>La prevención de la violencia escolar requiere un enfoque integral basado en:</p>
+                    <ul>
+                        <li><strong>Marco legal vigente:</strong> Ley General de Educación, Ley General de los Derechos de Niñas, Niños y Adolescentes, y protocolos estatales.</li>
+                        <li><strong>Definiciones clave:</strong> Diferencias entre conflicto, violencia, acoso escolar (bullying) y ciberacoso.</li>
+                        <li><strong>Enfoque de derechos humanos:</strong> Perspectiva de protección integral a la niñez y adolescencia.</li>
+                        <li><strong>Responsabilidades institucionales:</strong> Roles específicos del personal educativo según su función.</li>
+                    </ul>
+                    
+                    <div class="practical-activity">
+                        <h4>Actividad Práctica: Análisis de Caso</h4>
+                        <p><strong>Objetivo:</strong> Identificar elementos clave en la detección y atención de situaciones de violencia escolar.</p>
+                        <p><strong>Instrucciones:</strong></p>
+                        <ol>
+                            <li>Lee detenidamente el caso presentado.</li>
+                            <li>Identifica los indicadores de violencia o acoso presentes.</li>
+                            <li>Propón acciones inmediatas a seguir según el protocolo institucional.</li>
+                            <li>Reflexiona sobre estrategias de prevención que podrían implementarse.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Detección Temprana y Protocolos de Actuación</h3>
+                    <p>La detección temprana es fundamental para prevenir la escalada de la violencia. Señales de alerta incluyen:</p>
+                    
+                    <div class="checklist">
+                        <p><strong>Señales en estudiantes que podrían estar sufriendo acoso:</strong></p>
+                        <ul>
+                            <li>Cambios repentinos en el comportamiento o rendimiento académico</li>
+                            <li>Pérdida o deterioro de pertenencias personales</li>
+                            <li>Marcas físicas sin justificación aparente</li>
+                            <li>Evitación de situaciones escolares o sociales</li>
+                            <li>Síntomas psicosomáticos recurrentes</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-by-step">
+                        <h4>Protocolo de Actuación ante Situaciones de Violencia Escolar</h4>
+                        <ol>
+                            <li><strong>Primera acogida:</strong> Escucha activa y contención emocional.</li>
+                            <li><strong>Recolección de información:</strong> Entrevistas individuales con las partes involucradas y testigos.</li>
+                            <li><strong>Análisis de la situación:</strong> Determinar la gravedad y tipo de violencia.</li>
+                            <li><strong>Acciones inmediatas:</strong> Medidas de protección para la víctima.</li>
+                            <li><strong>Comunicación con familias:</strong> Entrevistas por separado siguiendo protocolos establecidos.</li>
+                            <li><strong>Seguimiento:</strong> Acompañamiento y evaluación de las medidas implementadas.</li>
+                        </ol>
+                    </div>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Construcción de Acuerdos de Convivencia</h2>
+                
+                <article class="strategy-card">
+                    <h3>Participación Estudiantil en la Creación de Normas</h3>
+                    <p>La construcción colaborativa de normas favorece el compromiso y la responsabilidad compartida:</p>
+                    
+                    <div class="practical-activity">
+                        <h4>Técnica: Asamblea de Aula para la Construcción de Acuerdos</h4>
+                        <p><strong>Duración:</strong> 2 sesiones de 50 minutos</p>
+                        <p><strong>Materiales:</strong> Papelógrafos, marcadores, tarjetas de colores</p>
+                        <p><strong>Desarrollo:</strong></p>
+                        <ol>
+                            <li><strong>Lluvia de ideas:</strong> "¿Cómo nos gustaría que fuera nuestra convivencia en el aula?"</li>
+                            <li><strong>Categorización:</strong> Agrupar las ideas por dimensiones (respeto, responsabilidad, participación, etc.)</li>
+                            <li><strong>Redacción de acuerdos:</strong> Transformar las ideas en normas concretas y positivas.</li>
+                            <li><strong>Compromiso personal:</strong> Cada estudiante elige un aspecto en el que se compromete a mejorar.</li>
+                            <li><strong>Firma simbólica:</strong> Creación de un mural con los acuerdos y firmas.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Estrategias para el Mantenimiento de los Acuerdos</h3>
+                    <p>Mantener vivos los acuerdos requiere de seguimiento y evaluación continua:</p>
+                    <ul>
+                        <li><strong>Espacios de diálogo:</strong> Reuniones periódicas para evaluar el cumplimiento.</li>
+                        <li><strong>Ejercicios de reflexión:</strong> Análisis de situaciones cotidianas a la luz de los acuerdos.</li>
+                        <li><strong>Rol docente:</strong> Modelado consistente de las conductas esperadas.</li>
+                        <li><strong>Mecanismos de reparación:</strong> Enfoque restaurativo ante incumplimientos.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Mediación y Resolución Pacífica de Conflictos</h2>
+                
+                <article class="strategy-card">
+                    <h3>Modelo de Mediación Escolar</h3>
+                    <p>La mediación escolar como herramienta para la transformación pacífica de conflictos:</p>
+                    
+                    <div class="step-by-step">
+                        <h4>Proceso de Mediación en 6 Pasos</h4>
+                        <ol>
+                            <li><strong>Presentación y reglas:</strong> Crear un clima de confianza y establecer normas básicas.</li>
+                            <li><strong>Cuenta de hechos:</strong> Cada parte expone su versión sin interrupciones.</li>
+                            <li><strong>Aclaración del conflicto:</strong> Identificar intereses y necesidades subyacentes.</li>
+                            <li><strong>Propuestas de solución:</strong> Generar alternativas de mutuo beneficio.</li>
+                            <li><strong>Acuerdo:</strong> Redactar compromisos concretos y realistas.</li>
+                            <li><strong>Seguimiento:</strong> Establecer fechas para evaluar el cumplimiento.</li>
+                        </ol>
+                    </div>
+
+                    <div class="case-study">
+                        <h4>Caso Práctico: Conflicto entre Estudiantes</h4>
+                        <p><strong>Situación:</strong> Dos estudiantes tienen constantes enfrentamientos verbales que están afectando el clima del aula.</p>
+                        <p><strong>Preguntas para el análisis:</strong></p>
+                        <ol>
+                            <li>¿Cuáles serían los primeros pasos a seguir como docente?</li>
+                            <li>¿Qué técnicas de mediación podrías aplicar?</li>
+                            <li>¿Cómo involucrarías a otros estudiantes en la resolución?</li>
+                            <li>¿Qué estrategias preventivas podrías implementar?</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Programa de Alumnos Mediadores</h3>
+                    <p>Implementación de un programa de pares mediadores:</p>
+                    
+                    <div class="checklist">
+                        <p><strong>Pasos para implementar un programa de mediación escolar:</strong></p>
+                        <ol>
+                            <li>Sensibilizar a la comunidad educativa sobre la mediación.</li>
+                            <li>Seleccionar y formar a los estudiantes mediadores.</li>
+                            <li>Establecer un espacio físico para las mediaciones.</li>
+                            <li>Crear un sistema de derivación de casos.</li>
+                            <li>Realizar seguimiento y evaluación del programa.</li>
+                        </ol>
+                    </div>
+
+                    <div class="practical-activity">
+                        <h4>Actividad: Capacitación de Estudiantes Mediadores</h4>
+                        <p><strong>Contenidos clave para la formación:</strong></p>
+                        <ul>
+                            <li>Habilidades de comunicación asertiva</li>
+                            <li>Identificación de emociones propias y ajenas</li>
+                            <li>Técnicas de escucha activa</li>
+                            <li>Proceso de mediación paso a paso</li>
+                            <li>Límites de la mediación y cuándo derivar</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="reflection-activity">
+                <h2>Actividad de Integración y Reflexión</h2>
+                <p>Para consolidar tu aprendizaje, reflexiona sobre las siguientes preguntas:</p>
+                <ol>
+                    <li>¿Cómo podrías adaptar los protocolos presentados a las características específicas de tu contexto educativo?</li>
+                    <li>¿Qué estrategias podrías implementar para fomentar la participación activa de los estudiantes en la construcción de la convivencia escolar?</li>
+                    <li>¿De qué manera podrías involucrar a las familias en la prevención de la violencia escolar?</li>
+                    <li>¿Qué recursos necesitarías para implementar un programa de mediación escolar en tu institución?</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

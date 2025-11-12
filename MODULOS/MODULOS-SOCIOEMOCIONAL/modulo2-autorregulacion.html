@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Estrategias para la Autorregulación y la Salud Mental - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .learning-objectives {
+            background-color: #f0f8ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .strategy-section {
+            margin: 3rem 0;
+        }
+
+        .strategy-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .practical-activity, .case-study {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .practical-activity h4, .case-study h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .reflection-activity {
+            background-color: #f5f9f5;
+            border-left: 4px solid #2ecc71;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .reflection-activity ol {
+            padding-left: 1.5rem;
+        }
+
+        .reflection-activity li {
+            margin-bottom: 1rem;
+        }
+
+        .step-by-step {
+            background-color: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .strategy-card, .practical-activity, .case-study, .step-by-step {
+                padding: 1rem;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 2: Estrategias para la Autorregulación y la Salud Mental</h1>
+            <p>Doctorado en Educación - Desarrollo Socioemocional y Convivencia Escolar</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../desarrollo-socioemocional.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="module-content">
+            <div class="learning-objectives">
+                <h2>Objetivos de Aprendizaje</h2>
+                <p>Al finalizar este módulo, serás capaz de:</p>
+                <ul>
+                    <li>Implementar técnicas de mindfulness y regulación emocional en el contexto educativo.</li>
+                    <li>Diseñar y utilizar efectivamente un "espacio de la calma" en el aula.</li>
+                    <li>Aplicar principios básicos de primeros auxilios psicológicos en situaciones de crisis emocional.</li>
+                    <li>Desarrollar estrategias de autocuidado para mantener el bienestar emocional docente.</li>
+                </ul>
+            </div>
+
+            <section class="strategy-section">
+                <h2>Mindfulness y Regulación Emocional en el Aula</h2>
+                
+                <article class="strategy-card">
+                    <h3>Fundamentos del Mindfulness Educativo</h3>
+                    <p>El mindfulness en el contexto educativo se refiere a la práctica intencional de prestar atención al momento presente, sin juzgar. Sus beneficios incluyen:</p>
+                    <ul>
+                        <li><strong>Mejora de la atención y concentración</strong> en las actividades académicas.</li>
+                        <li>Reducción del estrés y la ansiedad en estudiantes y docentes.</li>
+                        <li>Desarrollo de la autorregulación emocional.</li>
+                        <li>Fomento de un clima de aula positivo.</li>
+                    </ul>
+                    
+                    <div class="practical-activity">
+                        <h4>Actividad Práctica: La Respiración Consciente</h4>
+                        <p><strong>Duración:</strong> 3-5 minutos</p>
+                        <p><strong>Instrucciones:</strong></p>
+                        <ol>
+                            <li>Invita a los estudiantes a sentarse cómodamente con la espalda recta.</li>
+                            <li>Pídeles que cierren los ojos o bajen la mirada.</li>
+                            <li>Guíalos para que presten atención a su respiración, notando el aire que entra y sale.</li>
+                            <li>Si la mente se distrae, invítalos a volver suavemente la atención a la respiración.</li>
+                            <li>Finaliza con una inhalación profunda y una exhalación lenta.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Estrategias para Integrar el Mindfulness en la Rutina Diaria</h3>
+                    <ul>
+                        <li><strong>Inicio de clase:</strong> 2 minutos de respiración consciente para centrar la atención.</li>
+                        <li><strong>Transiciones:</strong> Pausas de 1 minuto entre actividades para reenfocar la atención.</li>
+                        <li><strong>Antes de evaluaciones:</strong> Ejercicios de respiración para reducir la ansiedad.</li>
+                        <li><strong>Cierre de clase:</strong> Reflexión de 2 minutos sobre el aprendizaje del día.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Diseño e Implementación del "Espacio de la Calma"</h2>
+                
+                <article class="strategy-card">
+                    <h3>Elementos Esenciales del Espacio de la Calma</h3>
+                    <p>Un espacio de la calma efectivo debe incluir:</p>
+                    <ul>
+                        <li><strong>Ubicación:</strong> Un rincón tranquilo, con iluminación suave y alejado de distracciones.</li>
+                        <li><strong>Elementos sensoriales:</strong> Cojines cómodos, mantas con peso, juguetes antiestrés.</li>
+                        <li><strong>Herramientas visuales:</strong> Imágenes relajantes, frases motivacionales, tarjetas con emociones.</li>
+                        <li><strong>Recursos auditivos:</strong> Música relajante, sonidos de la naturaleza (opcional).</li>
+                    </ul>
+
+                    <div class="step-by-step">
+                        <h4>Guía Paso a Paso para Crear tu Espacio de la Calma</h4>
+                        <ol>
+                            <li>Selecciona un espacio tranquilo en el aula.</li>
+                            <li>Coloca cojines o una alfombra cómoda.</li>
+                            <li>Añade elementos sensoriales (pelotas antiestrés, masilla, etc.).</li>
+                            <li>Incluye recursos visuales (carteles de respiración, emociones).</li>
+                            <li>Establece reglas claras para su uso.</li>
+                            <li>Enseña a los estudiantes cómo utilizar el espacio de manera efectiva.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Protocolos de Uso y Evaluación</h3>
+                    <p>Para garantizar el uso efectivo del espacio de la calma:</p>
+                    <ul>
+                        <li>Establece momentos específicos para su uso.</li>
+                        <li>Crea un sistema de turnos si es necesario.</n                        <li>Enseña estrategias específicas para regular emociones.</li>
+                        <li>Evalúa periódicamente su efectividad mediante observación y retroalimentación.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Primeros Auxilios Psicológicos en el Ámbito Educativo</h2>
+                
+                <article class="strategy-card">
+                    <h3>Detección Temprana de Señales de Alerta</h3>
+                    <p>Los docentes deben estar atentos a señales como:</p>
+                    <ul>
+                        <li>Cambios repentinos en el comportamiento o rendimiento académico.</li>
+                        <li>Aislamiento social persistente.</li>
+                        <li>Expresiones de desesperanza o tristeza prolongada.</li>
+                        <li>Dificultad para concentrarse o cambios en los patrones de sueño.</li>
+                    </ul>
+
+                    <div class="case-study">
+                        <h4>Caso Práctico: Estudiante con Ansiedad</h4>
+                        <p><strong>Situación:</strong> Un estudiante muestra signos de ansiedad antes de los exámenes, incluyendo dificultad para respirar y pensamientos negativos.</p>
+                        <p><strong>Acciones recomendadas:</strong></p>
+                        <ol>
+                            <li>Crear un espacio seguro para hablar con el estudiante.</li>
+                            <li>Enseñar técnicas de respiración y relajación.</li>
+                            <li>Adaptar las evaluaciones si es necesario.</li>
+                            <li>Involucrar al equipo de orientación escolar si los síntomas persisten.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Protocolo de Actuación en Crisis Emocionales</h3>
+                    <p>Pasos a seguir ante una crisis emocional:</p>
+                    <ol>
+                        <li><strong>Mantén la calma</strong> y asegura la seguridad física del estudiante.</li>
+                        <li>Proporciona un <strong>espacio tranquilo</strong> y privado.</li>
+                        <li>Escucha activamente <strong>sin juzgar</strong>.</li>
+                        <li>Ayuda a identificar y nombrar las emociones.</li>
+                        <li>Ofrece <strong>apoyo emocional</strong> y tranquilidad.</li>
+                        <li>Si es necesario, <strong>deriva a profesionales</strong> de la salud mental.</li>
+                    </ol>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Autocuidado Docente: Estrategias para el Bienestar Emocional</h3>
+                    <p>El bienestar del docente es fundamental para poder apoyar a los estudiantes:</p>
+                    <ul>
+                        <li><strong>Límites saludables:</strong> Aprende a decir no cuando sea necesario.</li>
+                        <li><strong>Práctica regular de autocuidado:</strong> Ejercicio, alimentación balanceada, descanso adecuado.</li>
+                        <li><strong>Red de apoyo:</strong> Conecta con colegas y comparte experiencias.</li>
+                        <li><strong>Reconocimiento de límites:</strong> Saber cuándo buscar ayuda profesional.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="reflection-activity">
+                <h2>Actividad de Integración y Reflexión</h2>
+                <p>Para consolidar tu aprendizaje, reflexiona sobre las siguientes preguntas:</p>
+                <ol>
+                    <li>¿Cómo podrías adaptar las estrategias de mindfulness presentadas para que sean apropiadas para la edad de tus estudiantes?</li>
+                    <li>¿Qué elementos incluirías en tu propio "espacio de la calma" del aula y por qué?</li>
+                    <li>¿Cuáles son tus propias estrategias de autocuidado y cómo podrías mejorarlas?</li>
+                    <li>¿Qué recursos adicionales necesitarías para implementar efectivamente los primeros auxilios psicológicos en tu contexto educativo?</li>
+                </ol>
+            </section>
+        </div>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

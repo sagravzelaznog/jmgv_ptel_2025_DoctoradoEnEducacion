@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Integración y Planificación - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Contenido del módulo */
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul, .module-content ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 1rem 0;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .info-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Estilos para los elementos del módulo */
+        .learning-objective {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .strategy-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1px;
+            background-color: #dee2e6;
+            border: 1px solid #dee2e6;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .observation-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .observation-cell {
+            background-color: white;
+            padding: 0.75rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .tool-card p {
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+
+        .tool-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .phase-container {
+            margin: 2rem 0;
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 1.5rem;
+        }
+
+        .phase-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .phase-title:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .activity {
+            background: white;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 4px 4px 0;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .resource {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .module-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 4: Integración y Planificación</h1>
+            <p>Evaluación Formativa para el Proceso de Aprendizaje</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../evaluacion-formativa.html" class="back-button">← Volver a Módulos</a>
+        
+        <div class="module-content">
+            <div class="learning-objective">
+                <h2>Objetivo de Aprendizaje</h2>
+                <p>Al finalizar este módulo, los participantes serán capaces de integrar efectivamente la evaluación formativa en la planificación didáctica, utilizando datos para tomar decisiones informadas que mejoren el proceso de enseñanza-aprendizaje.</p>
+            </div>
+            
+            <h2>Contenido del Módulo</h2>
+            
+            <div class="evaluation-method">
+                <h3>Integración de la evaluación en la planificación didáctica</h3>
+                
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <h4>1. Evaluación Diagnóstica</h4>
+                        <p><strong>Objetivo:</strong> Identificar conocimientos previos y necesidades de aprendizaje.</p>
+                        <div class="example">
+                            <p><strong>Estrategias:</strong></p>
+                            <ul>
+                                <li>Cuestionarios iniciales</li>
+                                <li>Discusiones guiadas</li>
+                                <li>Mapas conceptuales</li>
+                                <li>Actividades de activación</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <h4>2. Evaluación Formativa Continua</h4>
+                        <p><strong>Objetivo:</strong> Monitorear el progreso y ajustar la enseñanza.</p>
+                        <div class="example">
+                            <p><strong>Estrategias:</strong></p>
+                            <ul>
+                                <li>Preguntas de verificación de comprensión</li>
+                                <li>Tareas cortas de aplicación</li>
+                                <li>Autoevaluaciones y coevaluaciones</li>
+                                <li>Portafolios de aprendizaje</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <h4>3. Evaluación Sumativa</h4>
+                        <p><strong>Objetivo:</strong> Valorar los aprendizajes alcanzados.</p>
+                        <div class="example">
+                            <p><strong>Estrategias:</strong></p>
+                            <ul>
+                                <li>Proyectos finales</li>
+                                <li>Pruebas de desempeño</li>
+                                <li>Presentaciones orales</li>
+                                <li>Exámenes escritos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Ejemplo de integración en una secuencia didáctica</h4>
+                    <p><strong>Tema:</strong> Cambio climático (Ciencias Naturales - Educación Secundaria)</p>
+                    
+                    <div class="phase-container">
+                        <h4 class="phase-title">Fase 1: Exploración inicial (Evaluación diagnóstica)</h4>
+                        <p><strong>Actividad:</strong> Lluvia de ideas sobre conceptos clave del cambio climático.</p>
+                        <p><strong>Instrumento:</strong> Mapa mental colaborativo en línea.</p>
+                        <p><strong>Uso de resultados:</strong> Identificar conceptos erróneos y nivel de conocimiento base.</p>
+                    </div>
+                    
+                    <div class="phase-container">
+                        <h4 class="phase-title">Fase 2: Desarrollo (Evaluación formativa)</h4>
+                        <p><strong>Actividades:</strong> 
+                            <ul>
+                                <li>Entregas parciales de investigación</li>
+                                <li>Cuestionarios de autoevaluación</li>
+                                <li>Discusiones en pequeños grupos</li>
+                            </ul>
+                        </p>
+                        <p><strong>Instrumentos:</strong> Rúbricas de observación, listas de cotejo, diarios de aprendizaje.</p>
+                    </div>
+                    
+                    <div class="phase-container">
+                        <h4 class="phase-title">Fase 3: Cierre (Evaluación sumativa)</h4>
+                        <p><strong>Producto final:</strong> Proyecto de investigación sobre un aspecto del cambio climático.</p>
+                        <p><strong>Instrumentos:</strong> Rúbrica de evaluación del proyecto, presentación oral, autoevaluación.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="evaluation-method">
+                <h3>Análisis y uso de datos formativos</h3>
+                
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <h4>1. Recolección sistemática de datos</h4>
+                        <p>Estrategias para recopilar información valiosa:</p>
+                        <ul>
+                            <li>Observaciones estructuradas en el aula</li>
+                            <li>Cuestionarios rápidos de salida (exit tickets)</li>
+                            <li>Análisis de tareas y trabajos</li>
+                            <li>Registros de participación</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <h4>2. Análisis de datos</h4>
+                        <p>Cómo interpretar la información recopilada:</p>
+                        <ul>
+                            <li>Identificar patrones y tendencias</li>
+                            <li>Detectar conceptos problemáticos</li>
+                            <li>Reconocer necesidades individuales</li>
+                            <li>Evaluar la efectividad de las estrategias</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <h4>3. Toma de decisiones</h4>
+                        <p>Acciones basadas en datos:</p>
+                        <ul>
+                            <li>Ajustar el ritmo de la enseñanza</li>
+                            <li>Replanificar actividades</li>
+                            <li>Ofrecer apoyo diferenciado</li>
+                            <li>Modificar estrategias didácticas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="observation-grid">
+                    <div class="observation-header">Tipo de dato</div>
+                    <div class="observation-header">Herramienta de recolección</div>
+                    <div class="observation-header">Uso potencial</div>
+                    
+                    <div class="observation-cell">Comprensión conceptual</div>
+                    <div class="observation-cell">Preguntas de respuesta corta, mapas conceptuales</div>
+                    <div class="observation-cell">Identificar conceptos que necesitan refuerzo</div>
+                    
+                    <div class="observation-cell">Habilidades prácticas</div>
+                    <div class="observation-cell">Rúbricas de observación, grabaciones</div>
+                    <div class="observation-cell">Ajustar las oportunidades de práctica</div>
+                    
+                    <div class="observation-cell">Actitudes y motivación</div>
+                    <div class="observation-cell">Escalas de actitud, diarios de aprendizaje</div>
+                    <div class="observation-cell">Modificar estrategias de motivación</div>
+                </div>
+                
+                <div class="example-box">
+                    <h4>Ejemplo de toma de decisiones basada en datos</h4>
+                    <p><strong>Contexto:</strong> Después de un examen parcial de matemáticas, el 60% de los estudiantes mostraron dificultades con los problemas de proporcionalidad.</p>
+                    <p><strong>Análisis:</strong> Revisión de exámenes mostró que el problema principal era la identificación de las magnitudes involucradas.</p>
+                    <p><strong>Acciones implementadas:</strong>
+                        <ol>
+                            <li>Sesión de refuerzo con ejemplos concretos</li>
+                            <li>Actividad práctica en grupo para identificar magnitudes</li>
+                            <li>Ejercicios adicionales con retroalimentación inmediata</li>
+                        </ol>
+                    </p>
+                    <p><strong>Resultado:</strong> En la siguiente evaluación, el 85% de los estudiantes mostraron dominio del tema.</p>
+                </div>
+            </div>
+            
+            <div class="evaluation-method">
+                <h3>Caso práctico: Rediseño de una secuencia didáctica</h3>
+                
+                <div class="strategy-card">
+                    <h4>Contexto</h4>
+                    <p><strong>Asignatura:</strong> Lengua y Literatura</p>
+                    <p><strong>Nivel:</strong> 3er año de Educación Secundaria</p>
+                    <p><strong>Tema:</strong> Análisis de textos argumentativos</p>
+                    <p><strong>Duración:</strong> 6 sesiones de 50 minutos</p>
+                </div>
+                
+                <div class="phase-container">
+                    <h4 class="phase-title">Paso 1: Análisis de la secuencia original</h4>
+                    <p><strong>Actividades principales:</strong></p>
+                    <ul>
+                        <li>Explicación teórica sobre textos argumentativos</li>
+                        <li>Lectura de un texto modelo</li>
+                        <li>Redacción de un texto argumentativo</li>
+                        <li>Entrega final para calificación</li>
+                    </ul>
+                    <p><strong>Problemas identificados:</strong></p>
+                    <ul>
+                        <li>Falta de evaluación durante el proceso</li>
+                        <li>Retroalimentación solo al final</li>
+                        <li>Pocas oportunidades de mejora</li>
+                    </ul>
+                </div>
+                
+                <div class="phase-container">
+                    <h4 class="phase-title">Paso 2: Secuencia rediseñada con evaluación formativa</h4>
+                    
+                    <div class="example-box">
+                        <h5>Sesión 1: Introducción y diagnóstico</h5>
+                        <p><strong>Actividad:</strong> Análisis de textos argumentativos cotidianos (publicidad, cartas al director)</p>
+                        <p><strong>Evaluación formativa:</strong> Mapa conceptual sobre los elementos de la argumentación</p>
+                        <p><strong>Uso de resultados:</strong> Identificar conceptos previos y ajustar el nivel de profundidad</p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <h5>Sesión 2-3: Desarrollo de habilidades</h5>
+                        <p><strong>Actividad:</strong> Análisis de textos modelo</p>
+                        <p><strong>Evaluación formativa:</strong> 
+                            <ul>
+                                <li>Rúbrica de análisis de textos</li>
+                                <li>Autoevaluación de participación</li>
+                                <li>Preguntas de verificación de comprensión</li>
+                            </ul>
+                        </p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <h5>Sesión 4-5: Producción con retroalimentación</h5>
+                        <p><strong>Actividad:</strong> Borrador de texto argumentativo</p>
+                        <p><strong>Evaluación formativa:</strong>
+                            <ul>
+                                <li>Rúbrica de coevaluación entre pares</li>
+                                <li>Revisión guiada por el docente</li>
+                                <li>Lista de verificación de requisitos</li>
+                            </ul>
+                        </p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <h5>Sesión 6: Evaluación final y reflexión</h5>
+                        <p><strong>Actividad:</strong> Versión final del texto argumentativo</p>
+                        <p><strong>Evaluación sumativa:</strong> 
+                            <ul>
+                                <li>Rúbrica de evaluación detallada</li>
+                                <li>Autoevaluación del proceso</li>
+                                <li>Reflexión sobre el aprendizaje</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="phase-container">
+                    <h4 class="phase-title">Paso 3: Instrumentos de evaluación</h4>
+                    <div class="strategy-grid">
+                        <div class="tool-card">
+                            <h4>Rúbrica de análisis de textos</h4>
+                            <p>Evalúa la capacidad de identificar y analizar elementos argumentativos en textos.</p>
+                            <span class="tool-tag">Evaluación formativa</span>
+                            <span class="tool-tag">Habilidades de análisis</span>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>Lista de verificación de borradores</h4>
+                            <p>Guía para la revisión de textos en proceso.</p>
+                            <span class="tool-tag">Autoevaluación</span>
+                            <span class="tool-tag">Retroalimentación</span>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>Rúbrica de evaluación final</h4>
+                            <p>Criterios claros para evaluar el producto final.</p>
+                            <span class="tool-tag">Evaluación sumativa</span>
+                            <span class="tool-tag">Retroalimentación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="evaluation-method">
+                <h3>Herramientas digitales para la evaluación formativa</h3>
+                <p>Plataformas y aplicaciones que facilitan la implementación de la evaluación formativa en el aula:</p>
+                
+                <div class="strategy-grid">
+                    <div class="tool-card">
+                        <h4>Kahoot!</h4>
+                        <p>Plataforma de preguntas y respuestas en tiempo real que permite evaluar la comprensión de manera lúdica.</p>
+                        <p><strong>Uso en evaluación formativa:</strong> Cuestionarios rápidos al inicio o final de la clase para verificar comprensión.</p>
+                        <span class="tool-tag">Cuestionarios interactivos</span>
+                        <span class="tool-tag">Tiempo real</span>
+                        <span class="tool-tag">Gamificación</span>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Padlet</h4>
+                        <p>Muro colaborativo donde los estudiantes pueden publicar respuestas, imágenes y enlaces.</p>
+                        <p><strong>Uso en evaluación formativa:</strong> Lluvia de ideas, organizadores gráficos colaborativos, portafolios digitales.</p>
+                        <span class="tool-tag">Colaboración</span>
+                        <span class="tool-tag">Organizadores visuales</span>
+                        <span class="tool-tag">Portafolios</span>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Google Forms</h4>
+                        <p>Herramienta para crear encuestas y cuestionarios con análisis automático de respuestas.</p>
+                        <p><strong>Uso en evaluación formativa:</strong> Evaluaciones diagnósticas, encuestas de comprensión, autoevaluaciones.</p>
+                        <span class="tool-tag">Cuestionarios</span>
+                        <span class="tool-tag">Análisis de datos</span>
+                        <span class="tool-tag">Personalizable</span>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Flip (anteriormente Flipgrid)</h4>
+                        <p>Plataforma de discusión en video que permite a los estudiantes responder a preguntas mediante grabaciones.</p>
+                        <p><strong>Uso en evaluación formativa:</strong> Reflexiones orales, presentaciones, discusiones asincrónicas.</p>
+                        <span class="tool-tag">Video</span>
+                        <span class="tool-tag">Expresión oral</span>
+                        <span class="tool-tag">Reflexión</span>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Mentimeter</h4>
+                        <p>Herramienta de presentación interactiva que permite crear encuestas en tiempo real.</p>
+                        <p><strong>Uso en evaluación formativa:</strong> Verificación de comprensión, lluvia de ideas, preguntas de reflexión.</p>
+                        <span class="tool-tag">Tiempo real</span>
+                        <span class="tool-tag">Interactivo</span>
+                        <span class="tool-tag">Anónimo</span>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Seesaw</h4>
+                        <p>Plataforma de portafolio digital que permite a los estudiantes documentar su aprendizaje.</p>
+                        <p><strong>Uso en evaluación formativa:</strong> Portafolios de aprendizaje, reflexiones, seguimiento del progreso.</p>
+                        <span class="tool-tag">Portafolio</span>
+                        <span class="tool-tag">Documentación</span>
+                        <span class="tool-tag">Retroalimentación</span>
+                    </div>
+                </div>
+                
+                <div class="activity">
+                    <h4>Actividad: Selección de herramientas digitales</h4>
+                    <p><strong>Objetivo:</strong> Identificar las herramientas digitales más adecuadas para tu contexto educativo.</p>
+                    <p><strong>Instrucciones:</strong></p>
+                    <ol>
+                        <li>Selecciona una de tus secuencias didácticas actuales</li>
+                        <li>Identifica al menos tres momentos donde podrías incorporar evaluación formativa</li>
+                        <li>Para cada momento, selecciona una herramienta digital de las presentadas</li>
+                        <li>Justifica cómo cada herramienta mejoraría la evaluación formativa en ese momento</li>
+                        <li>Comparte tu propuesta con un compañero y recibe retroalimentación</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="resource">
+                <h3>Recursos adicionales</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Guía completa de herramientas digitales para la evaluación formativa</a></li>
+                    <li><a href="#" target="_blank">Plantilla para el diseño de secuencias didácticas con evaluación formativa integrada</a></li>
+                    <li><a href="#" target="_blank">Ejemplos de rúbricas para diferentes tipos de evaluación</a></li>
+                    <li><a href="#" target="_blank">Videotutorial: Cómo implementar la evaluación formativa en el aula</a></li>
+                </ul>
+            </div>
+            
+            <div class="reflection-box">
+                <h3>Reflexión final</h3>
+                <p>La integración efectiva de la evaluación formativa en la planificación didáctica requiere un enfoque sistemático y reflexivo. Al incorporar estrategias de evaluación continua, análisis de datos y ajustes basados en evidencias, podemos crear experiencias de aprendizaje más significativas y efectivas para todos los estudiantes.</p>
+                <p>Recuerda que la evaluación formativa no es un evento aislado, sino un proceso continuo que informa y mejora tanto la enseñanza como el aprendizaje.</p>
+            </div>
+            
+            <div class="tool-card">
+                <h4>Kahoot!</h4>
+                <p>Plataforma de preguntas y respuestas en tiempo real que permite evaluar la comprensión de manera lúdica.</p>
+                <div>
+                    <span class="tool-tag">Cuestionarios interactivos</span>
+                    <span class="tool-tag">Tiempo real</span>
+                    <span class="tool-tag">Gamificación</span>
+                </div>
+            </div>
+            
+            <div class="tool-card">
+                <h4>Google Forms</h4>
+                <p>Herramienta para crear encuestas y cuestionarios con opción de autoevaluación y retroalimentación inmediata.</p>
+                <div>
+                    <span class="tool-tag">Encuestas</span>
+                    <span class="tool-tag">Análisis de datos</span>
+                    <span class="tool-tag">Personalizable</span>
+                </div>
+            </div>
+            
+            <div class="tool-card">
+                <h4>Padlet</h4>
+                <p>Muro digital colaborativo donde los estudiantes pueden compartir sus trabajos y recibir retroalimentación.</p>
+                <div>
+                    <span class="tool-tag">Colaboración</span>
+                    <span class="tool-tag">Portafolio digital</span>
+                    <span class="tool-tag">Retroalimentación</span>
+                </div>
+            </div>
+            
+            <h3>Actividades de Aprendizaje</h3>
+            <ol>
+                <li>Diseñar una secuencia didáctica integrando evaluación formativa</li>
+                <li>Crear un plan de implementación de evaluación formativa para una asignatura</li>
+                <li>Evaluar herramientas digitales para la evaluación formativa</li>
+            </ol>
+            
+            <h3>Recursos Adicionales</h3>
+            <ul>
+                <li>Plantillas para la planificación con evaluación formativa</li>
+                <li>Guía de herramientas digitales para la evaluación</li>
+                <li>Casos de estudio de implementación exitosa</li>
+            </ul>
+        </div>
+        
+        <a href="../evaluacion-formativa.html" class="back-button">← Volver a Módulos</a>
+    </div>
+    
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

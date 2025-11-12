@@ -1,0 +1,778 @@
+
+:root {
+				--primary-color: #2c3e50;
+				--secondary-color: #3498db;
+				--accent-color: #e74c3c;
+				--light-color: #ecf0f1;
+				--dark-color: #2c3e50;
+				--text-color: #333;
+				--text-light: #7f8c8d;
+}
+:root {
+	--primary-color: #2c3e50;
+	--secondary-color: #3498db;
+	--accent-color: #e74c3c;
+	--light-color: #ecf0f1;
+	--dark-color: #2c3e50;
+	--text-color: #333;
+	--text-light: #7f8c8d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: var(--text-color);
+	background-color: #f9f9f9;
+	padding-bottom: 2rem;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* Header */
+.course-header {
+	background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+	color: white;
+	padding: 3rem 0;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.course-header h1 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.course-header p {
+	font-size: 1.1rem;
+	max-width: 800px;
+	margin: 0 auto;
+	opacity: 0.9;
+}
+
+/* Contenido del módulo */
+.module-content {
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	margin: 2rem 0;
+}
+
+.module-content h2 {
+	color: var(--primary-color);
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--light-color);
+}
+
+.module-content h3 {
+	color: var(--secondary-color);
+	margin: 1.5rem 0 1rem;
+}
+
+.module-section,
+.activities-section,
+.resources-section {
+	margin-bottom: 3rem;
+	padding: 1.5rem;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.module-section h2,
+.activities-section h2,
+.resources-section h2 {
+	color: var(--primary-color);
+	border-bottom: 2px solid var(--light-color);
+	padding-bottom: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+.module-section h3,
+.activities-section h3,
+.resources-section h3 {
+	color: var(--secondary-color);
+	margin: 1.5rem 0 1rem;
+}
+
+.module-section h4 {
+	color: var(--dark-color);
+	margin: 1.25rem 0 0.75rem;
+	font-size: 1.1rem;
+}
+
+.module-content ul, 
+.module-content ol {
+	margin: 1rem 0 1rem 2rem;
+	line-height: 1.7;
+}
+
+.module-content li {
+	margin-bottom: 0.5rem;
+}
+
+/* Estilos para los elementos especiales */
+.learning-objective {
+	background-color: #f0f7ff;
+	border-left: 4px solid var(--secondary-color);
+	padding: 1rem;
+	margin: 1.5rem 0;
+	border-radius: 0 4px 4px 0;
+}
+
+.key-concept {
+	background-color: #f9f9f9;
+	border: 1px solid #e0e0e0;
+	padding: 1.25rem;
+	margin: 1.5rem 0;
+	border-radius: 6px;
+}
+
+.comparison-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+	margin: 1.5rem 0;
+}
+
+.comparison-col {
+	background: #f8f9fa;
+	padding: 1.25rem;
+	border-radius: 6px;
+	border: 1px solid #e0e0e0;
+}
+
+.comparison-col h4 {
+	color: var(--primary-color);
+	margin-top: 0;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid #dee2e6;
+}
+
+.cycle-container {
+	margin: 2rem 0;
+}
+
+.cycle-step {
+	position: relative;
+	padding: 1.25rem;
+	margin-bottom: 1.5rem;
+	background: #f8f9fa;
+	border-left: 4px solid var(--secondary-color);
+	border-radius: 0 4px 4px 0;
+}
+
+.cycle-step h4 {
+	margin-top: 0;
+	color: var(--primary-color);
+}
+
+.example {
+	background: #f0f8ff;
+	padding: 0.75rem 1rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	font-style: italic;
+	border-left: 3px solid #4dabf7;
+}
+
+.feedback-principles {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.25rem;
+	margin: 1.5rem 0;
+}
+
+.principle {
+	background: #f8f9fa;
+	padding: 1.25rem;
+	border-radius: 6px;
+	border: 1px solid #e9ecef;
+}
+
+.principle h4 {
+	color: var(--secondary-color);
+	margin-top: 0;
+}
+
+.strategies {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.25rem;
+	margin: 2rem 0;
+}
+
+.strategy {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	padding: 1.25rem;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.strategy:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.strategy h4 {
+	color: var(--primary-color);
+	margin-top: 0;
+}
+
+.activity {
+	background: #f8f9fa;
+	border-left: 4px solid var(--accent-color);
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	border-radius: 0 4px 4px 0;
+}
+
+.activity h3 {
+	color: var(--primary-color);
+	margin-top: 0;
+}
+
+.activity strong {
+	color: var(--dark-color);
+}
+
+.resource {
+	margin-bottom: 1.5rem;
+}
+
+.resource h3 {
+	color: var(--primary-color);
+}
+
+.resource ul {
+	margin-left: 1.5rem;
+}
+
+.resource a {
+	color: var(--secondary-color);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.resource a:hover {
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.comparison-grid,
+	.feedback-principles,
+	.strategies {
+					grid-template-columns: 1fr;
+	}
+	
+	.module-section,
+	.activities-section,
+	.resources-section {
+					padding: 1rem;
+	}
+	
+	.activity {
+					padding: 1.25rem;
+	}
+}
+
+.module-content li {
+	margin-bottom: 0.5rem;
+	line-height: 1.6;
+}
+
+.back-button {
+	display: inline-block;
+	background-color: var(--primary-color);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	text-decoration: none;
+	margin: 1rem 0;
+	transition: background-color 0.3s;
+}
+
+.back-button:hover {
+	background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+	.course-header h1 {
+					font-size: 1.8rem;
+	}
+	
+	.module-content {
+					padding: 1.5rem;
+	}
+}
+
+body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 1.6;
+				color: var(--text-color);
+				background-color: #f9f9f9;
+}
+
+.container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 15px;
+}
+
+/* Header */
+.course-header {
+				background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+				color: white;
+				padding: 3rem 0;
+				text-align: center;
+				margin-bottom: 2rem;
+}
+
+.course-header h1 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+}
+
+.course-header p {
+				font-size: 1.2rem;
+				max-width: 800px;
+				margin: 0 auto;
+}
+
+/* Módulos */
+.modules-container {
+				padding: 2rem 0;
+}
+
+.module {
+				background: white;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+				margin-bottom: 2rem;
+				overflow: hidden;
+}
+
+.module-header {
+				background: var(--primary-color);
+				color: white;
+				padding: 1rem 1.5rem;
+				cursor: pointer;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+}
+
+.module-header h2 {
+				margin: 0;
+				font-size: 1.5rem;
+}
+
+.module-content {
+				padding: 1.5rem;
+				display: none;
+}
+
+.module-content ul {
+				list-style-position: inside;
+				margin: 1rem 0;
+}
+
+.module-content li {
+				margin-bottom: 0.5rem;
+}
+
+.module.active .module-content {
+				display: block;
+				animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(-10px); }
+				to { opacity: 1; transform: translateY(0); }
+}
+
+.back-button {
+				display: inline-block;
+				margin: 2rem 0;
+				padding: 0.8rem 1.5rem;
+				background-color: var(--primary-color);
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+				transition: background-color 0.3s;
+}
+
+.back-button:hover {
+				background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+				.course-header h1 {
+								font-size: 2rem;
+				}
+				
+				.module-header h2 {
+								font-size: 1.2rem;
+				}
+}
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Contenido del módulo */
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        /* Estilos mejorados para el módulo */
+        .module-section,
+        .activities-section,
+        .resources-section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .module-section h2,
+        .activities-section h2,
+        .resources-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .module-section h3,
+        .activities-section h3,
+        .resources-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-section h4 {
+            color: var(--dark-color);
+            margin: 1.25rem 0 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .module-content ul, 
+        .module-content ol {
+            margin: 1rem 0 1rem 2rem;
+            line-height: 1.7;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 1rem 0;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Estilos para los elementos del módulo */
+        .learning-objective {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .evaluation-method {
+            margin-bottom: 2.5rem;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .observation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+            gap: 1px;
+            background-color: #dee2e6;
+            border: 1px solid #dee2e6;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .observation-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .observation-cell {
+            background-color: white;
+            padding: 0.75rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .strategy-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .rubric-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .rubric-type {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 1.25rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .portfolio-types {
+            margin: 2rem 0;
+        }
+
+        .type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .type-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .type-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-structure {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .evaluation-strategies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .strategy {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.5rem;
+        }
+
+        .guidelines {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .activity {
+            background: white;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 4px 4px 0;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .activity h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .resource {
+            background: white;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .resource h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .resource ul {
+            margin-left: 1.5rem;
+        }
+
+        .resource a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .resource a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .example {
+            background: #f0f8ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 3px solid #4dabf7;
+        }
+
+        @media (max-width: 768px) {
+            .observation-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .strategy-grid,
+            .type-grid,
+            .evaluation-strategies {
+                grid-template-columns: 1fr;
+            }
+            
+            .module-section,
+            .activities-section,
+            .resources-section {
+                padding: 1rem;
+            }
+            
+            .activity,
+            .resource {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .module-content {
+                padding: 1.5rem;
+            }
+        }
+    

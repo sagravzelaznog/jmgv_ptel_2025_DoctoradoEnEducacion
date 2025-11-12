@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Implementación en el Aula - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul, .module-content ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .planning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .planning-card {
+            background-color: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+
+        .planning-card h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .resource-item {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .resource-item h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .grouping-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .grouping-card {
+            background-color: #fff8e6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd54f;
+        }
+
+        .grouping-card h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .learning-structures {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .structure {
+            background-color: #f0f4f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #6ab7ff;
+        }
+
+        .structure h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .classroom-layout, .time-management {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .layout-option, .time-block {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .layout-option h5, .time-block h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .activity {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .activity h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .activity strong {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 4: Implementación en el Aula</h1>
+            <p>Estrategias prácticas para gestionar la diversidad en el aula</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../diferenciacion-nivelacion.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            
+            <h3>1. Estrategias para grupos diversos</h3>
+            <ul>
+                <li>Organización del espacio y los recursos</li>
+                <li>Agrupamientos flexibles</li>
+                <li>Actividades multinivel</li>
+            </ul>
+
+            <h3>2. Gestión del tiempo</h3>
+            <ul>
+                <li>Planificación de secuencias didácticas</li>
+                <li>Rutinas y transiciones</li>
+                <li>Uso efectivo del tiempo de clase</li>
+            </ul>
+
+            <h3>3. Casos de éxito</h3>
+            <ul>
+                <li>Experiencias de implementación</li>
+                <li>Lecciones aprendidas</li>
+                <li>Análisis de resultados</li>
+            </ul>
+
+            <h3>4. Trabajo colaborativo</h3>
+            <ul>
+                <li>Estrategias de aprendizaje cooperativo</li>
+                <li>Roles en el aula diversa</li>
+                <li>Evaluación del trabajo en equipo</li>
+            </ul>
+        </div>
+
+        <div class="module-content">
+            <h2>Actividades de Aprendizaje</h2>
+            <ol>
+                <li>Diseño de una secuencia didáctica diferenciada</li>
+                <li>Simulación de situaciones de aula</li>
+                <li>Elaboración de un plan de acción</li>
+                <li>Presentación de proyectos de implementación</li>
+            </ol>
+        </div>
+
+        <div class="module-content">
+            <h2>Recursos Adicionales</h2>
+            <ul>
+                <li>Plantillas de planificación</li>
+                <li>Videos de clases modelo</li>
+                <li>Guías de implementación</li>
+                <li>Bibliografía recomendada</li>
+            </ul>
+        </div>
+
+        <a href="../diferenciacion-nivelacion.html" class="back-button">← Volver al curso</a>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

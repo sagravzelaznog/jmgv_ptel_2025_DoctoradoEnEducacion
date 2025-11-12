@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Técnicas e Instrumentos de Evaluación - Doctorado en Educación</title>
+    <style> 
+        :root {
+                        --primary-color: #2c3e50;
+                        --secondary-color: #3498db;
+                        --accent-color: #e74c3c;
+                        --light-color: #ecf0f1;
+                        --dark-color: #2c3e50;
+                        --text-color: #333;
+                        --text-light: #7f8c8d;
+        }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-bottom: 2rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .course-header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .course-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Contenido del módulo */
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .module-section,
+        .activities-section,
+        .resources-section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .module-section h2,
+        .activities-section h2,
+        .resources-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .module-section h3,
+        .activities-section h3,
+        .resources-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .module-section h4 {
+            color: var(--dark-color);
+            margin: 1.25rem 0 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .module-content ul, 
+        .module-content ol {
+            margin: 1rem 0 1rem 2rem;
+            line-height: 1.7;
+        }
+        
+        .module-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Estilos para los elementos especiales */
+        .learning-objective {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .key-concept {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .comparison-col {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .comparison-col h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .cycle-container {
+            margin: 2rem 0;
+        }
+        
+        .cycle-step {
+            position: relative;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .cycle-step h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .example {
+            background: #f0f8ff;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-style: italic;
+            border-left: 3px solid #4dabf7;
+        }
+        
+        .feedback-principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        
+        .principle {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .principle h4 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        
+        .strategies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+        
+        .strategy {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.25rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .strategy:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .strategy h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .activity {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .activity h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .activity strong {
+            color: var(--dark-color);
+        }
+        
+        .resource {
+            margin-bottom: 1.5rem;
+        }
+        
+        .resource h3 {
+            color: var(--primary-color);
+        }
+        
+        .resource ul {
+            margin-left: 1.5rem;
+        }
+        
+        .resource a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .resource a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid,
+            .feedback-principles,
+            .strategies {
+                            grid-template-columns: 1fr;
+            }
+            
+            .module-section,
+            .activities-section,
+            .resources-section {
+                            padding: 1rem;
+            }
+            
+            .activity {
+                            padding: 1.25rem;
+            }
+        }
+        
+        .module-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 1rem 0;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .course-header h1 {
+                            font-size: 1.8rem;
+            }
+            
+            .module-content {
+                            padding: 1.5rem;
+            }
+        }
+        
+        body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        line-height: 1.6;
+                        color: var(--text-color);
+                        background-color: #f9f9f9;
+        }
+        
+        .container {
+                        width: 90%;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 15px;
+        }
+        
+        /* Header */
+        .course-header {
+                        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                        color: white;
+                        padding: 3rem 0;
+                        text-align: center;
+                        margin-bottom: 2rem;
+        }
+        
+        .course-header h1 {
+                        font-size: 2.5rem;
+                        margin-bottom: 1rem;
+        }
+        
+        .course-header p {
+                        font-size: 1.2rem;
+                        max-width: 800px;
+                        margin: 0 auto;
+        }
+        
+        /* Módulos */
+        .modules-container {
+                        padding: 2rem 0;
+        }
+        
+        .module {
+                        background: white;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                        margin-bottom: 2rem;
+                        overflow: hidden;
+        }
+        
+        .module-header {
+                        background: var(--primary-color);
+                        color: white;
+                        padding: 1rem 1.5rem;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+        }
+        
+        .module-header h2 {
+                        margin: 0;
+                        font-size: 1.5rem;
+        }
+        
+        .module-content {
+                        padding: 1.5rem;
+                        display: none;
+        }
+        
+        .module-content ul {
+                        list-style-position: inside;
+                        margin: 1rem 0;
+        }
+        
+        .module-content li {
+                        margin-bottom: 0.5rem;
+        }
+        
+        .module.active .module-content {
+                        display: block;
+                        animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+                        from { opacity: 0; transform: translateY(-10px); }
+                        to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .back-button {
+                        display: inline-block;
+                        margin: 2rem 0;
+                        padding: 0.8rem 1.5rem;
+                        background-color: var(--primary-color);
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+                        background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+                        .course-header h1 {
+                                        font-size: 2rem;
+                        }
+                        
+                        .module-header h2 {
+                                        font-size: 1.2rem;
+                        }
+        }
+        </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 2: Técnicas e Instrumentos de Evaluación</h1>
+            <p>Evaluación Formativa para el Proceso de Aprendizaje</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../evaluacion-formativa.html" class="back-button">← Volver a Módulos</a>
+        
+        <div class="module-content">
+            <div class="module-section">
+                <h2>Técnicas e Instrumentos de Evaluación Formativa</h2>
+                
+                <div class="learning-objective">
+                    <h3>Objetivo de Aprendizaje</h3>
+                    <p>Dominar diversas técnicas e instrumentos de evaluación formativa para implementarlos efectivamente en el proceso de enseñanza-aprendizaje, promoviendo la mejora continua del aprendizaje.</p>
+                </div>
+
+                <h3>1. Técnicas de Observación y Escucha Activa</h3>
+                <p>La observación sistemática y la escucha activa son fundamentales para captar evidencias del aprendizaje en tiempo real y ajustar la enseñanza según las necesidades detectadas.</p>
+                
+                <div class="evaluation-method">
+                    <h4>1.1 Observación Directa</h4>
+                    <p>Estrategias para una observación efectiva:</p>
+                    <ul>
+                        <li><strong>Enfoque intencional:</strong> Definir claramente qué se va a observar</li>
+                        <li><strong>Registro sistemático:</strong> Utilizar formatos estructurados</li>
+                        <li><strong>Múltiples momentos:</strong> Observar en diferentes contextos y actividades</li>
+                    </ul>
+                    
+                    <div class="example-box">
+                        <h5>Ejemplo de Registro de Observación</h5>
+                        <div class="observation-grid">
+                            <div class="observation-header">Estudiante</div>
+                            <div class="observation-header">Participación</div>
+                            <div class="observation-header">Trabajo en Equipo</div>
+                            <div class="observation-header">Notas</div>
+                            
+                            <div class="observation-cell">Est. A</div>
+                            <div class="observation-cell">✓✓✓</div>
+                            <div class="observation-cell">✓✓</div>
+                            <div class="observation-cell">Excelente participación, podría mejorar en la escucha activa</div>
+                            
+                            <div class="observation-cell">Est. B</div>
+                            <div class="observation-cell">✓</div>
+                            <div class="observation-cell">✓✓✓</div>
+                            <div class="observation-cell">Buen trabajo colaborativo, necesita participar más</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-method">
+                    <h4>1.2 Escucha Activa</h4>
+                    <p>La escucha activa implica atención plena a las intervenciones de los estudiantes para identificar comprensiones y malentendidos.</p>
+                    
+                    <div class="strategy-grid">
+                        <div class="strategy-card">
+                            <h5>Técnica del Parafraseo</h5>
+                            <p>Repetir con palabras propias lo que el estudiante ha dicho para verificar comprensión.</p>
+                            <p class="example"><strong>Ejemplo:</strong> "Entonces, lo que estás diciendo es que... ¿es correcto?"</p>
+                        </div>
+                        
+                        <div class="strategy-card">
+                            <h5>Preguntas de Sondeo</h5>
+                            <p>Preguntas que invitan a profundizar en el razonamiento del estudiante.</p>
+                            <p class="example"><strong>Ejemplo:</strong> "¿Podrías explicar cómo llegaste a esa conclusión?"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>2. Diseño y Uso de Rúbricas de Proceso</h3>
+                <p>Las rúbricas son herramientas valiosas para la evaluación formativa cuando se enfocan en el proceso de aprendizaje.</p>
+                
+                <div class="rubric-types">
+                    <div class="rubric-type">
+                        <h4>2.1 Rúbricas Analíticas</h4>
+                        <p>Evalúan componentes específicos por separado, proporcionando retroalimentación detallada.</p>
+                        <div class="example">
+                            <p><strong>Ejemplo de criterio:</strong> Calidad de la argumentación</p>
+                            <ul>
+                                <li><strong>Excelente (4):</strong> Argumentos claros, relevantes y bien fundamentados</li>
+                                <li><strong>Satisfactorio (3):</strong> Argumentos claros pero con algunas inconsistencias</li>
+                                <li><strong>En desarrollo (2):</strong> Argumentos poco claros o poco fundamentados</li>
+                                <li><strong>Inicial (1):</strong> Falta de argumentación o argumentos irrelevantes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rubric-type">
+                        <h4>2.2 Rúbricas de Desarrollo</h4>
+                        <p>Muestran la progresión del aprendizaje a través de niveles de desempeño.</p>
+                        <div class="example">
+                            <p><strong>Niveles de dominio en resolución de problemas:</strong></p>
+                            <ol>
+                                <li><strong>Emergente:</strong> Identifica el problema con ayuda</li>
+                                <li><strong>En desarrollo:</strong> Propone soluciones con orientación</li>
+                                <li><strong>Competente:</strong> Aplica estrategias de solución de manera independiente</li>
+                                <li><strong>Avanzado:</strong> Evalúa y mejora soluciones propuestas</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>3. El Portafolio como Herramienta de Seguimiento</h3>
+                <p>El portafolio es una colección sistemática y organizada de evidencias del aprendizaje que muestra el progreso en el tiempo.</p>
+                
+                <div class="portfolio-types">
+                    <div class="portfolio-type">
+                        <h4>3.1 Tipos de Portafolios</h4>
+                        <div class="type-grid">
+                            <div class="type-card">
+                                <h5>De Proceso</h5>
+                                <ul>
+                                    <li>Muestra el desarrollo de habilidades</li>
+                                    <li>Incluye borradores y versiones preliminares</li>
+                                    <li>Permite ver la evolución del aprendizaje</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="type-card">
+                                <h5>De Presentación</h5>
+                                <ul>
+                                    <li>Incluye los mejores trabajos</li>
+                                    <li>Muestra los logros alcanzados</li>
+                                    <li>Útil para evaluaciones sumativas</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="type-card">
+                                <h5>De Evaluación</h5>
+                                <ul>
+                                    <li>Demuestra el logro de competencias</li>
+                                    <li>Incluye reflexiones del estudiante</li>
+                                    <li>Contiene evidencias de aprendizaje</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-structure">
+                        <h4>3.2 Estructura Recomendada</h4>
+                        <ol>
+                            <li><strong>Presentación:</strong> Introducción y objetivos del portafolio</li>
+                            <li><strong>Índice:</strong> Organización del contenido</li>
+                            <li><strong>Evidencias:</strong> Trabajos seleccionados</li>
+                            <li><strong>Reflexiones:</strong> Análisis del propio aprendizaje</li>
+                            <li><strong>Autoevaluación:</strong> Valoración personal del progreso</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h3>4. Estrategias de Autoevaluación y Coevaluación</h3>
+                <p>Involucrar a los estudiantes en su propio proceso de evaluación fomenta la autonomía y la reflexión.</p>
+                
+                <div class="evaluation-strategies">
+                    <div class="strategy">
+                        <h4>4.1 Autoevaluación</h4>
+                        <p>Los estudiantes reflexionan sobre su propio aprendizaje mediante:</p>
+                        <ul>
+                            <li>Diarios de aprendizaje</li>
+                            <li>Listas de verificación</li>
+                            <li>Escalas de valoración</li>
+                            <li>Rúbricas de autoevaluación</li>
+                        </ul>
+                        <div class="example">
+                            <p><strong>Ejemplo de pregunta para autoevaluación:</strong></p>
+                            <p>"¿Qué estrategias me han resultado más útiles para comprender este tema? ¿Por qué?"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="strategy">
+                        <h4>4.2 Coevaluación</h4>
+                        <p>Los estudiantes evalúan el trabajo de sus compañeros desarrollando habilidades de pensamiento crítico.</p>
+                        <div class="guidelines">
+                            <h5>Pautas para una coevaluación efectiva:</h5>
+                            <ul>
+                                <li>Establecer criterios claros de evaluación</li>
+                                <li>Enseñar a dar retroalimentación constructiva</li>
+                                <li>Fomentar un ambiente de respeto y confianza</li>
+                                <li>Proporcionar guías o rúbricas de apoyo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activities-section">
+                <h2>Actividades de Aprendizaje</h2>
+                
+                <div class="activity">
+                    <h3>Actividad 1: Diseño de Rúbricas</h3>
+                    <p><strong>Objetivo:</strong> Desarrollar habilidades para crear rúbricas de evaluación formativa.</p>
+                    <p><strong>Instrucciones:</strong></p>
+                    <ol>
+                        <li>Seleccionar un objetivo de aprendizaje específico de tu área</li>
+                        <li>Identificar 3-4 criterios clave de evaluación</li>
+                        <li>Definir 3-4 niveles de desempeño para cada criterio</li>
+                        <li>Incluir descriptores claros para cada nivel</li>
+                        <li>Probar la rúbrica con un trabajo de estudiante</li>
+                    </ol>
+                    <p><strong>Producto:</strong> Rúbrica lista para implementar en el aula.</p>
+                </div>
+                
+                <div class="activity">
+                    <h3>Actividad 2: Portafolio Digital</h3>
+                    <p><strong>Objetivo:</strong> Crear un portafolio digital para una asignatura específica.</p>
+                    <p><strong>Instrucciones:</strong></p>
+                    <ol>
+                        <li>Definir el propósito y los objetivos del portafolio</li>
+                        <li>Seleccionar una plataforma digital (Google Sites, WordPress, etc.)</li>
+                        <li>Diseñar la estructura y organización del contenido</li>
+                        <li>Incluir al menos 5 evidencias de aprendizaje</li>
+                        <li>Agregar reflexiones sobre el proceso de aprendizaje</li>
+                    </ol>
+                    <p><strong>Producto:</strong> Portafolio digital con estructura completa.</p>
+                </div>
+                
+                <div class="activity">
+                    <h3>Actividad 3: Taller de Coevaluación</h3>
+                    <p><strong>Objetivo:</strong> Desarrollar habilidades para la coevaluación efectiva.</p>
+                    <p><strong>Instrucciones:</strong></p>
+                    <ol>
+                        <li>Formar grupos de 3-4 personas</li>
+                        <li>Cada participante comparte un trabajo propio</li>
+                        <li>Los compañeros proporcionan retroalimentación usando una rúbrica</li>
+                        <li>El autor reflexiona sobre la retroalimentación recibida</li>
+                        <li>Discutir en grupo la experiencia</li>
+                    </ol>
+                    <p><strong>Producto:</strong> Informe reflexivo sobre la experiencia de coevaluación.</p>
+                </div>
+            </div>
+
+            <div class="resources-section">
+                <h2>Recursos Adicionales</h2>
+                
+                <div class="resource">
+                    <h3>Lecturas Recomendadas</h3>
+                    <ul>
+                        <li>Brookhart, S. M. (2013). <em>How to Create and Use Rubrics for Formative Assessment and Grading.</em> ASCD.</li>
+                        <li>Andrade, H. L., & Valtcheva, A. (2009). Promoting Learning and Achievement Through Self-Assessment. <em>Theory Into Practice, 48</em>(1), 12-19.</li>
+                        <li>Boud, D., & Falchikov, N. (2007). <em>Rethinking Assessment in Higher Education: Learning for the Longer Term.</em> Routledge.</li>
+                    </ul>
+                </div>
+                
+                <div class="resource">
+                    <h3>Recursos Digitales</h3>
+                    <ul>
+                        <li><a href="https://www.rcampus.com/rubricshowc.cfm" target="_blank" rel="noopener">RCampus - Ejemplos de rúbricas</a></li>
+                        <li><a href="https://sites.google.com/" target="_blank" rel="noopener">Google Sites - Para crear portafolios digitales</a></li>
+                        <li><a href="https://www.mentimeter.com/" target="_blank" rel="noopener">Mentimeter - Para evaluaciones formativas interactivas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource">
+                    <h3>Plantillas y Herramientas</h3>
+                    <ul>
+                        <li>Plantilla de rúbrica analítica editable</li>
+                        <li>Guía para la implementación de portafolios digitales</li>
+                        <li>Formularios de autoevaluación y coevaluación</li>
+                        <li>Listas de verificación para observación en el aula</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <a href="../evaluacion-formativa.html" class="back-button">← Volver a Módulos</a>
+    </div>
+    
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

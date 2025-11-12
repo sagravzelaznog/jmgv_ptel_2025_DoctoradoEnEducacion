@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Marco Conceptual de la Educación Inclusiva</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .module-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .module-content {
+            margin-bottom: 2rem;
+        }
+
+        .concept-card {
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 2rem 0;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0.3rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+
+        .definition-box {
+            background: #e8f4fc;
+            border: 1px solid #b3d9ff;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .definition-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .myth-reality {
+            margin: 1.5rem 0;
+        }
+
+        .myth, .reality {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        .myth {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+
+        .reality {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .module-header {
+                margin: -1rem -1rem 1.5rem -1rem;
+                padding: 1rem;
+            }
+            
+            .module-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-header">
+            <h1>Módulo 1: Marco Conceptual de la Educación Inclusiva</h1>
+        </div>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            <ul>
+                <li>De la integración a la inclusión: Un cambio de paradigma.</li>
+                <li>Identificación de Barreras para el Aprendizaje y la Participación (BAP) en el contexto escolar.</li>
+                <li>Mitos y realidades de las Necesidades Educativas Especiales (NEE).</li>
+            </ul>
+
+            <div class="concept-card">
+                <h2>1. Evolución Histórica: De la Exclusión a la Inclusión</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Modelo de Exclusión (Hasta siglo XIX)</h3>
+                        <p>Las personas con discapacidad eran excluidas del sistema educativo regular. La educación especial no existía como tal.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Modelo de Institucionalización (Siglo XIX - Mediados XX)</h3>
+                        <p>Creación de instituciones especializadas, separando a los estudiantes con discapacidad del sistema educativo regular.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Modelo de Integración (Década de 1970-1990)</h3>
+                        <p>Los estudiantes con discapacidad se integran a escuelas regulares, pero deben adaptarse al sistema existente.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Modelo de Inclusión (A partir de 1990)</h3>
+                        <p>El sistema educativo se adapta para dar respuesta a la diversidad de todo el alumnado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="definition-box">
+                <div class="definition-title">¿Qué es la Educación Inclusiva?</div>
+                <p>La educación inclusiva es un proceso orientado a garantizar el derecho a una educación de calidad para todos los estudiantes, reconociendo y valorando la diversidad, eliminando barreras para el aprendizaje y la participación, y promoviendo la igualdad de oportunidades.</p>
+            </div>
+
+            <h2>2. Barreras para el Aprendizaje y la Participación (BAP)</h2>
+            
+            <div class="concept-card">
+                <h3>Tipos de Barreras</h3>
+                <ul>
+                    <li><strong>Actitudinales:</strong> Prejuicios, estereotipos y bajas expectativas.</li>
+                    <li><strong>Físicas:</strong> Infraestructura inaccesible, falta de recursos materiales.</li>
+                    <li><strong>Curriculares:</strong> Contenidos y métodos de enseñanza rígidos.</li>
+                    <li><strong>Organizativas:</strong> Estructuras escolares poco flexibles.</li>
+                    <li><strong>Comunicacionales:</strong> Falta de sistemas alternativos de comunicación.</li>
+                </ul>
+                
+                <h3>Estrategias para la Identificación de BAP</h3>
+                <ol>
+                    <li>Observación sistemática en el aula.</li>
+                    <li>Análisis de la participación del alumnado.</li>
+                    <li>Revisión de resultados académicos.</li>
+                    <li>Encuestas a estudiantes y familias.</li>
+                    <li>Análisis de la accesibilidad del centro.</li>
+                </ol>
+            </div>
+
+            <h2>3. Mitos y Realidades sobre las NEE</h2>
+            
+            <div class="myth-reality">
+                <div class="myth">
+                    <strong>Mito 1:</strong> Las NEE solo se refieren a discapacidades intelectuales.
+                </div>
+                <div class="reality">
+                    <strong>Realidad:</strong> Las NEE incluyen cualquier dificultad de aprendizaje que requiera atención específica, incluyendo altas capacidades, trastornos del desarrollo, dificultades específicas de aprendizaje, etc.
+                </div>
+            </div>
+
+            <div class="myth-reality">
+                <div class="myth">
+                    <strong>Mito 2:</strong> Los estudiantes con NEE ralentizan el aprendizaje del resto de la clase.
+                </div>
+                <div class="reality">
+                    <strong>Realidad:</strong> Las estrategias inclusivas benefician a todos los estudiantes, no solo a aquellos con NEE, al promover un aprendizaje más personalizado y significativo.
+                </div>
+            </div>
+
+            <div class="myth-reality">
+                <div class="myth">
+                    <strong>Mito 3:</strong> La inclusión es solo responsabilidad del docente de educación especial.
+                </div>
+                <div class="reality">
+                    <strong>Realidad:</strong> La inclusión es una responsabilidad compartida por toda la comunidad educativa: docentes, directivos, personal administrativo, familias y estudiantes.
+                </div>
+            </div>
+
+            <h2>Objetivos de Aprendizaje</h2>
+            <ul>
+                <li>Comprender la evolución histórica que ha llevado del modelo de exclusión al paradigma de la educación inclusiva.</li>
+                <li>Identificar y analizar críticamente las diferentes barreras para el aprendizaje y la participación presentes en el contexto escolar.</li>
+                <li>Desmitificar las concepciones erróneas sobre las Necesidades Educativas Especiales y su impacto en la práctica educativa.</li>
+                <li>Desarrollar estrategias para la identificación temprana de barreras en el aprendizaje.</li>
+                <li>Reflexionar sobre el rol del docente en la construcción de aulas inclusivas.</li>
+            </ul>
+
+            <h2>Actividades de Aprendizaje</h2>
+            <div class="concept-card">
+                <h3>1. Análisis de Casos Históricos</h3>
+                <p><strong>Objetivo:</strong> Identificar los diferentes modelos de atención a la diversidad a lo largo de la historia.</p>
+                <p><strong>Actividad:</strong> Analizar documentos históricos que ilustren los diferentes modelos (exclusión, institucionalización, integración, inclusión) y reflexionar sobre su impacto en la educación actual.</p>
+                
+                <h3>2. Mapeo de Barreras en el Contexto Escolar</h3>
+                <p><strong>Objetivo:</strong> Desarrollar habilidades para identificar barreras en el entorno educativo.</p>
+                <p><strong>Actividad:</strong> Realizar un recorrido por la institución educativa identificando diferentes tipos de barreras (físicas, actitudinales, curriculares) y proponer soluciones.</p>
+                
+                <h3>3. Foro de Discusión: Mitos y Realidades</h3>
+                <p><strong>Objetivo:</strong> Cuestionar creencias limitantes sobre la educación inclusiva.</p>
+                <p><strong>Actividad:</strong> Participar en un foro virtual donde se discutan mitos comunes sobre las NEE, respaldando las intervenciones con evidencia teórica y práctica.</p>
+            </div>
+
+            <h2>Recursos Adicionales</h2>
+            <div class="concept-card">
+                <h3>Lecturas Recomendadas</h3>
+                <ul>
+                    <li>UNESCO (2020). <em>Guía para asegurar la inclusión y la equidad en la educación</em>.</li>
+                    <li>Echeita, G. (2013). <em>Educación para la inclusión o educación sin exclusiones</em>. Narcea.</li>
+                    <li>Booth, T., & Ainscow, M. (2015). <em>Guía para la Educación Inclusiva: Desarrollando el aprendizaje y la participación en los centros escolares</em>.</li>
+                </ul>
+                
+                <h3>Recursos Digitales</h3>
+                <ul>
+                    <li><a href="https://www.inclusioneducativa.org/" target="_blank" rel="noopener">Portal de Educación Inclusiva</a> - Recursos y herramientas para docentes.</li>
+                    <li><a href="https://www.unicef.org/education/inclusive-education" target="_blank" rel="noopener">UNICEF - Educación Inclusiva</a> - Informes y guías prácticas.</li>
+                    <li><a href="https://www.european-agency.org/" target="_blank" rel="noopener">European Agency for Special Needs and Inclusive Education</a> - Recursos y publicaciones.</li>
+                </ul>
+                
+                <h3>Vídeos</h3>
+                <ul>
+                    <li><a href="https://youtu.be/fn8kAb5YlFQ" target="_blank" rel="noopener">"El viaje a la escuela" - Documental sobre educación inclusiva</a></li>
+                    <li><a href="https://youtu.be/6Wjhfvw6h6s" target="_blank" rel="noopener">TEDx: "El poder de la educación inclusiva"</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Formativa - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Módulos */
+        .modules-container {
+            padding: 2rem 0;
+        }
+
+        .module {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .module-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .module-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .module-content {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .module.active .module-content {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Evaluación Formativa para el Proceso de Aprendizaje</h1>
+            <p>Desarrolla competencias para diseñar e implementar estrategias de evaluación formativa, centrando la valoración en el proceso de aprendizaje y no solo en los resultados.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="modules-container">
+            <div class="module">
+                <a href="modulo evaluacion formativa/modulo1-fundamentos-evaluacion-formativa.html" class="module-header" style="text-decoration: none; color: inherit;">
+                    <h2>Módulo 1: Fundamentos de la Evaluación Formativa</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Evaluación formativa vs. sumativa: diferencias clave</li>
+                        <li>El ciclo de la evaluación formativa</li>
+                        <li>La retroalimentación como pilar fundamental</li>
+                    </ul>
+                    <a href="modulo evaluacion formativa/modulo1-fundamentos-evaluacion-formativa.html" class="back-button" style="display: inline-block; margin-top: 1rem;">Ver módulo completo →</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <a href="modulo evaluacion formativa/modulo2-tecnicas-instrumentos-evaluacion.html" class="module-header" style="text-decoration: none; color: inherit;">
+                    <h2>Módulo 2: Técnicas e Instrumentos de Evaluación</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Técnicas de observación y escucha activa</li>
+                        <li>Diseño y uso de rúbricas de proceso</li>
+                        <li>El portafolio como herramienta de seguimiento</li>
+                        <li>Estrategias de autoevaluación y coevaluación</li>
+                    </ul>
+                    <a href="modulo evaluacion formativa/modulo2-tecnicas-instrumentos-evaluacion.html" class="back-button" style="display: inline-block; margin-top: 1rem;">Ver módulo completo →</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <a href="modulo evaluacion formativa/modulo3-retroalimentacion-efectiva.html" class="module-header" style="text-decoration: none; color: inherit;">
+                    <h2>Módulo 3: Retroalimentación Efectiva</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Feedback vs. Feedforward: diferencias y aplicaciones</li>
+                        <li>Cómo dar feedback descriptivo y constructivo</li>
+                        <li>El error como oportunidad de aprendizaje</li>
+                        <li>Estrategias para fomentar la autorregulación</li>
+                    </ul>
+                    <a href="modulo evaluacion formativa/modulo3-retroalimentacion-efectiva.html" class="back-button" style="display: inline-block; margin-top: 1rem;">Ver módulo completo →</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <a href="modulo evaluacion formativa/modulo4-integracion-planificacion.html" class="module-header" style="text-decoration: none; color: inherit;">
+                    <h2>Módulo 4: Integración y Planificación</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Cómo integrar la evaluación en la planificación didáctica</li>
+                        <li>Uso de datos formativos para ajustar la enseñanza</li>
+                        <li>Caso práctico: Rediseño de una secuencia didáctica</li>
+                        <li>Herramientas digitales para la evaluación formativa</li>
+                    </ul>
+                    <a href="modulo evaluacion formativa/modulo4-integracion-planificacion.html" class="back-button" style="display: inline-block; margin-top: 1rem;">Ver módulo completo →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Manejo de los módulos
+        document.addEventListener('DOMContentLoaded', function() {
+            const modules = document.querySelectorAll('.module');
+            
+            // Prevenir la navegación cuando se hace clic en el contenido del módulo
+            modules.forEach(module => {
+                const header = module.querySelector('.module-header');
+                const content = module.querySelector('.module-content');
+                
+                // Evitar que los clics en el contenido del módulo activen la navegación
+                if (content) {
+                    content.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                }
+                
+                // Mostrar/ocultar el contenido al hacer clic en el encabezado
+                if (header && content) {
+                    header.addEventListener('click', (e) => {
+                        // Solo alternar si se hace clic en el encabezado, no en un enlace dentro de él
+                        if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+                            const isActive = module.classList.contains('active');
+                            
+                            // Cerrar todos los módulos
+                            modules.forEach(m => {
+                                m.classList.remove('active');
+                                const c = m.querySelector('.module-content');
+                                if (c) c.style.display = 'none';
+                                const ti = m.querySelector('.toggle-icon');
+                                if (ti) ti.textContent = '+';
+                            });
+                            
+                            // Abrir el módulo clickeado si no estaba activo
+                            if (!isActive) {
+                                module.classList.add('active');
+                                content.style.display = 'block';
+                                const toggleIcon = header.querySelector('.toggle-icon');
+                                if (toggleIcon) toggleIcon.textContent = '-';
+                            }
+                            
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return false;
+                        }
+                    });
+                }
+            });
+            
+            // Abrir el primer módulo por defecto
+            if (modules.length > 0) {
+                const firstModule = modules[0];
+                firstModule.classList.add('active');
+                const firstContent = firstModule.querySelector('.module-content');
+                if (firstContent) firstContent.style.display = 'block';
+                const firstToggle = firstModule.querySelector('.toggle-icon');
+                if (firstToggle) firstToggle.textContent = '-';
+            }
+        });
+    </script>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Socioemocional y Convivencia Escolar - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Módulos */
+        .modules-container {
+            padding: 2rem 0;
+        }
+
+        .module {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .module-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .module-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .module-content {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .module.active .module-content {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Desarrollo Socioemocional y Convivencia Escolar</h1>
+            <p>Brinda estrategias para el desarrollo de habilidades socioemocionales y de autorregulación en los estudiantes, y para la prevención y atención de la violencia y el acoso escolar.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="modules-container">
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='MODULOS-SOCIOEMOCIONAL/modulo1-hse.html';" style="cursor: pointer;">
+                    <h2>Módulo 1: Fundamentos de la Educación Socioemocional (HSE) <span style="font-size: 0.8em; color: #ecf0f1;">(Haz clic para ver el módulo completo)</span></h2>
+                    <span class="toggle-icon">→</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Las 5 dimensiones de la HSE (Autoconocimiento, Autorregulación, Autonomía, Empatía, Colaboración).</li>
+                        <li>El rol del docente como modelador socioemocional.</li>
+                        <li>Por qué la HSE es fundamental para el aprendizaje académico.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='MODULOS-SOCIOEMOCIONAL/modulo2-autorregulacion.html';" style="cursor: pointer;">
+                    <h2>Módulo 2: Estrategias para la Autorregulación y la Salud Mental <span style="font-size: 0.8em; color: #ecf0f1;">(Haz clic para ver el módulo completo)</span></h2>
+                    <span class="toggle-icon">→</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Técnicas de mindfulness y regulación emocional para el aula.</li>
+                        <li>Cómo crear un "espacio de la calma".</li>
+                        <li>Primeros auxilios psicológicos: Detección y canalización de problemas de salud mental.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='MODULOS-SOCIOEMOCIONAL/modulo3-prevencion-violencia.html';" style="cursor: pointer;">
+                    <h2>Módulo 3: Prevención de la Violencia y el Acoso Escolar <span style="font-size: 0.8em; color: #ecf0f1;">(Haz clic para ver el módulo completo)</span></h2>
+                    <span class="toggle-icon">→</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Protocolos de prevención y atención de la violencia y el acoso.</li>
+                        <li>Construcción de acuerdos de convivencia desde el grupo.</li>
+                        <li>Estrategias de mediación y resolución de conflictos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='MODULOS-SOCIOEMOCIONAL/modulo4-vinculacion-familias.html';" style="cursor: pointer;">
+                    <h2>Módulo 4: Vinculación con las Familias <span style="font-size: 0.8em; color: #ecf0f1;">(Haz clic para ver el módulo completo)</span></h2>
+                    <span class="toggle-icon">→</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Importancia de la alianza escuela-familia para la HSE.</li>
+                        <li>Cómo abordar el "ausentismo por falta de interés de los padres".</li>
+                        <li>Talleres y estrategias para involucrar a los padres en el bienestar socioemocional.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modules = document.querySelectorAll('.module');
+            
+            // Función para cerrar todos los módulos
+            function closeAllModules() {
+                modules.forEach(m => {
+                    m.classList.remove('active');
+                    const content = m.querySelector('.module-content');
+                    const icon = m.querySelector('.toggle-icon');
+                    if (content) content.style.display = 'none';
+                    if (icon) icon.textContent = '+';
+                });
+            }
+            
+            // Inicializar cada módulo
+            modules.forEach((module, index) => {
+                const header = module.querySelector('.module-header');
+                const content = module.querySelector('.module-content');
+                const toggleIcon = header ? header.querySelector('.toggle-icon') : null;
+                
+                // Agregar botón de "Ver módulo completo"
+                const moduleLinks = [
+                    'MODULOS-SOCIOEMOCIONAL/modulo1-hse.html',
+                    'MODULOS-SOCIOEMOCIONAL/modulo2-autorregulacion.html',
+                    'MODULOS-SOCIOEMOCIONAL/modulo3-prevencion-violencia.html',
+                    'MODULOS-SOCIOEMOCIONAL/modulo4-vinculacion-familias.html'
+                ];
+                
+                if (content) {
+                    const viewFullButton = document.createElement('a');
+                    viewFullButton.href = moduleLinks[index];
+                    viewFullButton.className = 'view-full-button';
+                    viewFullButton.textContent = 'Ver módulo completo →';
+                    viewFullButton.style.display = 'inline-block';
+                    viewFullButton.style.marginTop = '15px';
+                    viewFullButton.style.padding = '8px 15px';
+                    viewFullButton.style.backgroundColor = 'var(--secondary-color)';
+                    viewFullButton.style.color = 'white';
+                    viewFullButton.style.borderRadius = '4px';
+                    viewFullButton.style.textDecoration = 'none';
+                    viewFullButton.style.transition = 'background-color 0.3s';
+                    viewFullButton.onmouseover = function() {
+                        this.style.backgroundColor = '#2980b9';
+                    };
+                    viewFullButton.onmouseout = function() {
+                        this.style.backgroundColor = 'var(--secondary-color)';
+                    };
+                    
+                    content.appendChild(document.createElement('br'));
+                    content.appendChild(viewFullButton);
+                }
+                
+                // Manejar clic en el encabezado del módulo
+                if (header) {
+                    header.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const isActive = module.classList.contains('active');
+                        closeAllModules();
+                        
+                        if (!isActive) {
+                            module.classList.add('active');
+                            if (content) content.style.display = 'block';
+                            if (toggleIcon) toggleIcon.textContent = '-';
+                        }
+                        
+                        // Navegar al hacer clic en el encabezado
+                        window.location.href = moduleLinks[index];
+                    });
+                }
+                
+                // Prevenir la navegación al hacer clic en el contenido
+                if (content) {
+                    content.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
+                }
+            });
+            
+            // Abrir el primer módulo por defecto
+            if (modules.length > 0) {
+                modules[0].classList.add('active');
+                const firstContent = modules[0].querySelector('.module-content');
+                const firstIcon = modules[0].querySelector('.toggle-icon');
+                if (firstContent) firstContent.style.display = 'block';
+                if (firstIcon) firstIcon.textContent = '-';
+            }
+        });
+    </script>
+</body>
+</html>

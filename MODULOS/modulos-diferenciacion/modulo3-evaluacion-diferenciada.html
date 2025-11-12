@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Evaluación Diferenciada - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul, .module-content ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .evaluation-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .evaluation-type {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .evaluation-type h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tool-item {
+            background-color: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #d0e3ff;
+        }
+
+        .tool-item h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .improvement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .strategy {
+            background-color: #fff8e6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd54f;
+        }
+
+        .strategy h5 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .activity {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .activity h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .activity strong {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 3: Evaluación Diferenciada</h1>
+            <p>Estrategias para evaluar el aprendizaje de manera justa y efectiva</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../diferenciacion-nivelacion.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            
+            <h3>1. Diseño de Instrumentos de Evaluación Adaptados</h3>
+            <p>La evaluación diferenciada es fundamental para atender la diversidad en el aula y garantizar una medición justa del aprendizaje.</p>
+            
+            <h4>1.1 Tipos de Evaluación Diferenciada</h4>
+            <div class="evaluation-types">
+                <div class="evaluation-type">
+                    <h5>Evaluación Inicial</h5>
+                    <ul>
+                        <li>Diagnóstico de conocimientos previos</li>
+                        <li>Identificación de estilos de aprendizaje</li>
+                        <li>Evaluación de necesidades educativas</li>
+                    </ul>
+                </div>
+                <div class="evaluation-type">
+                    <h5>Evaluación Formativa</h5>
+                    <ul>
+                        <li>Seguimiento continuo</li>
+                        <li>Retroalimentación constante</li>
+                        <li>Ajuste de estrategias</li>
+                    </ul>
+                </div>
+                <div class="evaluation-type">
+                    <h5>Evaluación Sumativa</h5>
+                    <ul>
+                        <li>Valoración final</li>
+                        <li>Niveles de logro</li>
+                        <li>Toma de decisiones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4>1.2 Herramientas de Evaluación</h4>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <h5>Rúbricas</h5>
+                    <ul>
+                        <li>Analíticas vs. Holísticas</li>
+                        <li>Niveles de desempeño</li>
+                        <li>Criterios claros</li>
+                    </ul>
+                </div>
+                <div class="tool-item">
+                    <h5>Portafolios</h5>
+                    <ul>
+                        <li>Selección de evidencias</li>
+                        <li>Reflexión del estudiante</li>
+                        <li>Seguimiento de progreso</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>2. Retroalimentación Efectiva</h3>
+            <p>La retroalimentación es un pilar fundamental en el proceso de evaluación formativa.</p>
+            
+            <h4>2.1 Técnicas de Retroalimentación</h4>
+            <ul>
+                <li><strong>Retroalimentación descriptiva:</strong> Específica, oportuna y accionable</li>
+                <li><strong>Autoevaluación:</strong> Reflexión del estudiante sobre su propio aprendizaje</li>
+                <li><strong>Coevaluación:</strong> Retroalimentación entre pares</li>
+            </ul>
+
+            <h4>2.2 Estrategias de Mejora</h4>
+            <div class="improvement-grid">
+                <div class="strategy">
+                    <h5>Preguntas Guía</h5>
+                    <p>Preguntas que invitan a la reflexión y al aprendizaje profundo.</p>
+                </div>
+                <div class="strategy">
+                    <h5>Rúbricas de Autoevaluación</h5>
+                    <p>Herramientas para que los estudiantes evalúen su propio trabajo.</p>
+                </div>
+            </div>
+
+            <h3>3. Seguimiento del Progreso</h3>
+            <p>Monitoreo continuo para garantizar el avance en el aprendizaje.</p>
+            
+            <h4>3.1 Registros de Avance</h4>
+            <ul>
+                <li>Bitácoras de aprendizaje</li>
+                <li>Rúbricas de progreso</li>
+                <li>Registros anecdóticos</li>
+            </ul>
+
+            <h4>3.2 Informes Personalizados</h4>
+            <ul>
+                <li>Reportes de progreso individual</li>
+                <li>Recomendaciones específicas</li>
+                <li>Metas personalizadas</li>
+            </ul>
+        </div>
+
+        <div class="module-content">
+            <h2>Actividades de Aprendizaje</h2>
+            
+            <div class="activity">
+                <h3>1. Diseño de Rúbricas</h3>
+                <p><strong>Objetivo:</strong> Crear instrumentos de evaluación adaptados a diferentes niveles.</p>
+                <p><strong>Actividad:</strong> Desarrollar rúbricas para evaluar un producto de aprendizaje.</p>
+                <p><strong>Producto:</strong> Rúbrica lista para implementar.</p>
+            </div>
+
+            <div class="activity">
+                <h3>2. Taller de Retroalimentación</h3>
+                <p><strong>Objetivo:</strong> Practicar técnicas de retroalimentación efectiva.</p>
+                <p><strong>Actividad:</strong> Simulación de situaciones de retroalimentación.</p>
+                <p><strong>Producto:</strong> Guía de buenas prácticas.</p>
+            </div>
+
+            <div class="activity">
+                <h3>3. Plan de Seguimiento</h3>
+                <p><strong>Objetivo:</strong> Diseñar un sistema de seguimiento del progreso.</p>
+                <p><strong>Actividad:</strong> Crear formatos de registro y monitoreo.</p>
+                <p><strong>Producto:</strong> Kit de herramientas de seguimiento.</p>
+            </div>
+        </div>
+
+        <div class="module-content">
+            <h2>Recursos Adicionales</h2>
+            
+            <h3>Lecturas Recomendadas</h3>
+            <ul>
+                <li>Stiggins, R. J. (2005). Student-involved assessment for learning.</li>
+                <li>Black, P., & Wiliam, D. (2009). Developing the theory of formative assessment.</li>
+                <li>Artículos sobre evaluación formativa y diferenciada.</li>
+            </ul>
+
+            <h3>Recursos Digitales</h3>
+            <ul>
+                <li>Plantillas de rúbricas</li>
+                <li>Formatos de portafolios digitales</li>
+                <li>Herramientas de evaluación en línea</li>
+            </ul>
+
+            <h3>Herramientas de Evaluación</h3>
+            <ul>
+                <li>Rúbricas de evaluación</li>
+                <li>Guías de observación</li>
+                <li>Listas de cotejo</li>
+            </ul>
+        </div>
+
+        <a href="../diferenciacion-nivelacion.html" class="back-button">← Volver al curso</a>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

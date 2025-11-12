@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Fundamentos de la Diferenciación Educativa - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding-bottom: 2rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul, .module-content ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .benefit-item {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .benefit-item h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .activity {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .activity h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .activity strong {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 1: Fundamentos de la Diferenciación Educativa</h1>
+            <p>Principios y estrategias para implementar la educación diferenciada en el aula</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../diferenciacion-nivelacion.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            
+            <h3>1. Fundamentos Teóricos de la Educación Diferenciada</h3>
+            <p>La educación diferenciada es un enfoque pedagógico que reconoce y atiende la diversidad en el aula, adaptando la enseñanza a las necesidades individuales de los estudiantes.</p>
+            
+            <h4>1.1 Marco Conceptual</h4>
+            <ul>
+                <li><strong>Definición:</strong> Proceso de enseñanza que ajusta el currículo, la instrucción y la evaluación según las necesidades de aprendizaje de cada estudiante.</li>
+                <li><strong>Bases teóricas:</strong> Fundamentada en las teorías de Vygotsky (ZDP), Gardner (Inteligencias Múltiples) y Tomlinson (Diferenciación).</li>
+                <li><strong>Principios clave:</strong> Respeto por las diferencias, flexibilidad, inclusión y equidad educativa.</li>
+            </ul>
+
+            <h4>1.2 Beneficios en el Aprendizaje</h4>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h5>Para Estudiantes</h5>
+                    <ul>
+                        <li>Mayor motivación y compromiso</li>
+                        <li>Desarrollo de autonomía</li>
+                        <li>Mejores resultados académicos</li>
+                    </ul>
+                </div>
+                <div class="benefit-item">
+                    <h5>Para Docentes</h5>
+                    <ul>
+                        <li>Mayor satisfacción profesional</li>
+                        <li>Mejor gestión del aula</li>
+                        <li>Desarrollo de competencias docentes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>2. Estilos de Aprendizaje</h3>
+            <p>Comprender los diferentes estilos de aprendizaje es fundamental para implementar estrategias efectivas de diferenciación.</p>
+            
+            <h4>2.1 Modelos de Estilos de Aprendizaje</h4>
+            <ul>
+                <li><strong>Modelo VAK:</strong> Visual, Auditivo, Kinestésico</li>
+                <li><strong>Inteligencias Múltiples</strong> de Howard Gardner</li>
+                <li><strong>Estilos de Kolb:</strong> Divergente, Asimilador, Convergente, Acomodador</li>
+            </ul>
+
+            <h4>2.2 Herramientas de Diagnóstico</h4>
+            <ul>
+                <li>Cuestionarios de estilos de aprendizaje</li>
+                <li>Observación sistemática en el aula</li>
+                <li>Portafolios de aprendizaje</li>
+            </ul>
+
+            <h3>3. Estrategias para Diferentes Ritmos de Aprendizaje</h3>
+            <p>Adaptar la enseñanza a los diferentes ritmos de aprendizaje es esencial para el éxito educativo.</p>
+            
+            <h4>3.1 Actividades Escalonadas</h4>
+            <ul>
+                <li>Diseño de tareas con diferentes niveles de complejidad</li>
+                <li>Rutas de aprendizaje personalizadas</li>
+                <li>Tiempo flexible para la realización de actividades</li>
+            </ul>
+
+            <h4>3.2 Centros de Aprendizaje</h4>
+            <ul>
+                <li>Organización del aula por estaciones</li>
+                <li>Actividades autodirigidas</li>
+                <li>Materiales diversos según necesidades</li>
+            </ul>
+
+            <h3>4. Recursos y Herramientas</h3>
+            <p>Selección y uso efectivo de recursos para la educación diferenciada.</p>
+            
+            <h4>4.1 Materiales Didácticos</h4>
+            <ul>
+                <li>Recursos manipulativos</li>
+                <li>Materiales audiovisuales</li>
+                <li>Plataformas digitales educativas</li>
+            </ul>
+
+            <h4>4.2 Tecnologías de Apoyo</h4>
+            <ul>
+                <li>Plataformas de aprendizaje adaptativo</li>
+                <li>Herramientas de colaboración en línea</li>
+                <li>Recursos multimedia interactivos</li>
+            </ul>
+        </div>
+
+        <div class="module-content">
+            <h2>Actividades de Aprendizaje</h2>
+            
+            <div class="activity">
+                <h3>1. Análisis de Casos</h3>
+                <p><strong>Objetivo:</strong> Analizar situaciones reales de implementación de educación diferenciada.</p>
+                <p><strong>Actividad:</strong> En pequeños grupos, analizar un caso de estudio y proponer estrategias de intervención.</p>
+                <p><strong>Producto:</strong> Presentación de análisis y propuesta al grupo.</p>
+            </div>
+
+            <div class="activity">
+                <h3>2. Diseño de Diagnóstico</h3>
+                <p><strong>Objetivo:</strong> Crear un instrumento para identificar estilos de aprendizaje.</p>
+                <p><strong>Actividad:</strong> Desarrollar un cuestionario o rúbrica de observación.</p>
+                <p><strong>Producto:</strong> Instrumento de diagnóstico listo para aplicar.</p>
+            </div>
+
+            <div class="activity">
+                <h3>3. Secuencia Didáctica</h3>
+                <p><strong>Objetivo:</strong> Diseñar una secuencia didáctica diferenciada.</p>
+                <p><strong>Actividad:</strong> Planificar una clase considerando diferentes estilos y ritmos de aprendizaje.</p>
+                <p><strong>Producto:</strong> Plan de clase con adaptaciones para diferentes perfiles.</p>
+            </div>
+        </div>
+
+        <div class="module-content">
+            <h2>Recursos Adicionales</h2>
+            
+            <h3>Lecturas Recomendadas</h3>
+            <ul>
+                <li>Tomlinson, C. A. (2005). Estrategias para trabajar con la diversidad en el aula.</li>
+                <li>Gardner, H. (2011). Inteligencias múltiples: La teoría en la práctica.</li>
+                <li>Artículos académicos sobre educación inclusiva y diferenciada.</li>
+            </ul>
+
+            <h3>Recursos Digitales</h3>
+            <ul>
+                <li>Plataformas de aprendizaje adaptativo (ej. Khan Academy, Duolingo)</li>
+                <li>Herramientas de creación de cuestionarios (ej. Google Forms, Quizizz)</li>
+                <li>Recursos multimedia educativos (ej. Educaplay, Genially)</li>
+            </ul>
+
+            <h3>Plantillas y Guías</h3>
+            <ul>
+                <li>Plantilla para planificación de clases diferenciadas</li>
+                <li>Rúbrica para evaluar estilos de aprendizaje</li>
+                <li>Guía de estrategias de diferenciación</li>
+            </ul>
+        </div>
+
+        <a href="../diferenciacion-nivelacion.html" class="back-button">← Volver al curso</a>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Diseño Universal para el Aprendizaje (DUA)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .module-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .module-content {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        .principle {
+            background-color: #f5f9ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .principle-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .principle-number {
+            background-color: var(--secondary-color);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .principle-content {
+            flex-grow: 1;
+        }
+
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .guideline-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .guideline-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .guideline-card h4 {
+            color: var(--primary-color);
+            margin: 0 0 0.8rem 0;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .example-title:before {
+            content: "🛈";
+            margin-right: 0.5rem;
+            font-size: 1.2em;
+        }
+
+        .checklist {
+            list-style-type: none;
+            margin: 1rem 0 0 0;
+            padding: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            color: #2e7d32;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .strategy-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .strategy-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .strategy-icon {
+            margin-right: 0.8rem;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .module-header {
+                margin: -1rem -1rem 1.5rem -1rem;
+                padding: 1rem;
+            }
+            
+            .module-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-header">
+            <h1>Módulo 2: Diseño Universal para el Aprendizaje (DUA)</h1>
+        </div>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            <ul>
+                <li>Fundamentos teóricos del Diseño Universal para el Aprendizaje (DUA)</li>
+                <li>Los tres principios del DUA y sus pautas específicas</li>
+                <li>Estrategias prácticas para implementar DUA en el aula</li>
+                <li>Evaluación y diseño de ambientes de aprendizaje accesibles</li>
+                <li>Herramientas y recursos para la aplicación del DUA</li>
+            </ul>
+
+            <h2>¿Qué es el Diseño Universal para el Aprendizaje (DUA)?</h2>
+            <p>El Diseño Universal para el Aprendizaje es un marco educativo que busca maximizar las oportunidades de aprendizaje para todos los estudiantes a través de un diseño flexible de objetivos, métodos, materiales y evaluaciones. Se basa en la neurociencia del aprendizaje y reconoce la variabilidad natural de los estudiantes.</p>
+            
+            <div class="example-box">
+                <div class="example-title">¿Por qué es importante el DUA?</div>
+                <p>El DUA no solo beneficia a estudiantes con discapacidad, sino que mejora el aprendizaje de todos los estudiantes al ofrecer múltiples formas de representación, acción/expresión y motivación. Es una aproximación proactiva que anticipa la diversidad en lugar de reaccionar a ella.</p>
+            </div>
+
+            <h2>Los Tres Principios del DUA</h2>
+            
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-number">1</div>
+                    <h3>Múltiples formas de representación</h3>
+                </div>
+                <div class="principle-content">
+                    <p>Proporcionar diferentes formas de presentar la información para que todos los estudiantes puedan acceder al conocimiento de acuerdo a sus necesidades y preferencias.</p>
+                    
+                    <h4>Pautas específicas:</h4>
+                    <div class="guidelines-grid">
+                        <div class="guideline-card">
+                            <h4>1.1 Opciones para la percepción</h4>
+                            <ul>
+                                <li>Ofrecer formatos auditivos, visuales y táctiles</li>
+                                <li>Ajustar el tamaño del texto, contraste y volumen</li>
+                                <li>Proporcionar alternativas para el contenido auditivo y visual</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-card">
+                            <h4>1.2 Opciones para el lenguaje y símbolos</h4>
+                            <ul>
+                                <li>Clarificar vocabulario y símbolos</li>
+                                <li>Explicar la sintaxis y estructura</li>
+                                <li>Promover la comprensión entre lenguajes</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-card">
+                            <h4>1.3 Opciones para la comprensión</h4>
+                            <ul>
+                                <li>Activar conocimientos previos</li>
+                                <li>Resaltar patrones y características clave</li>
+                                <li>Guiar el procesamiento de la información</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-number">2</div>
+                    <h3>Múltiples formas de acción y expresión</h3>
+                </div>
+                <div class="principle-content">
+                    <p>Ofrecer diversas formas para que los estudiantes demuestren lo que saben y pueden hacer, considerando diferentes habilidades y preferencias.</p>
+                    
+                    <h4>Pautas específicas:</h4>
+                    <div class="guidelines-grid">
+                        <div class="guideline-card">
+                            <h4>2.1 Opciones para la acción física</h4>
+                            <ul>
+                                <li>Variar los métodos de respuesta</li>
+                                <li>Optimizar el acceso a herramientas y tecnologías</li>
+                                <li>Ofrecer alternativas para la interacción física</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-card">
+                            <h4>2.2 Opciones para la expresión y comunicación</h4>
+                            <ul>
+                                <li>Usar múltiples medios de comunicación</li>
+                                <li>Construir fluidez con herramientas graduadas</li>
+                                <li>Proporcionar herramientas de composición</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-card">
+                            <h4>2.3 Opciones para las funciones ejecutivas</h4>
+                            <ul>
+                                <li>Guiar el establecimiento de metas</n                                <li>Apoyar la planificación y desarrollo de estrategias</li>
+                                <li>Facilitar la gestión de la información</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="principle">
+                <div class="principle-header">
+                    <div class="principle-number">3</div>
+                    <h3>Múltiples formas de implicación</h3>
+                </div>
+                <div class="principle-content">
+                    <p>Estimular el interés y la motivación de los estudiantes ofreciendo opciones que fomenten la participación y el compromiso con el aprendizaje.</p>
+                    
+                    <h4>Pautas específicas:</h4>
+                    <div class="guidelines-grid">
+                        <div class="guideline-card">
+                            <h4>3.1 Opciones para captar el interés</h4>
+                            <ul>
+                                <li>Maximizar la elección y autonomía</li>
+                                <li>Asegurar la relevancia y el valor</li>
+                                <li>Minimizar amenazas y distracciones</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-card">
+                            <h4>3.2 Opciones para mantener el esfuerzo</h4>
+                            <ul>
+                                <li>Establecer metas apropiadas</li>
+                                <li>Variar los niveles de desafío</li>
+                                <li>Fomentar la colaboración</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-card">
+                            <h4>3.3 Opciones para la autorregulación</h4>
+                            <ul>
+                                <li>Promover expectativas y creencias positivas</li>
+                                <li>Desarrollar la autoevaluación</li>
+                                <li>Fomentar la reflexión</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Estrategias Prácticas para Implementar DUA en el Aula</h2>
+            
+            <div class="strategy-card">
+                <div class="strategy-header">
+                    <div class="strategy-icon">📋</div>
+                    <h3>Planificación de Clases con DUA</h3>
+                </div>
+                <ul class="checklist">
+                    <li>Identificar claramente los objetivos de aprendizaje esenciales</li>
+                    <li>Diseñar múltiples formas de presentar la información</li>
+                    <li>Ofrecer diversas opciones para que los estudiantes demuestren su aprendizaje</li>
+                    <li>Incluir actividades que fomenten la participación activa</li>
+                    <li>Proporcionar retroalimentación formativa continua</li>
+                </ul>
+            </div>
+
+            <div class="strategy-card">
+                <div class="strategy-header">
+                    <div class="strategy-icon">🔄</div>
+                    <h3>Evaluación con Enfoque DUA</h3>
+                </div>
+                <ul class="checklist">
+                    <li>Utilizar múltiples métodos de evaluación</li>
+                    <li>Ofrecer opciones en cuanto al formato de presentación</li>
+                    <li>Proporcionar rúbricas claras y accesibles</li>
+                    <li>Incluir autoevaluación y evaluación entre pares</li>
+                    <li>Permitir el uso de herramientas y apoyos tecnológicos</li>
+                </ul>
+            </div>
+
+            <h2>Diseño de Ambientes de Aprendizaje Accesibles</h2>
+            
+            <div class="guidelines-grid">
+                <div class="guideline-card">
+                    <h4>Accesibilidad Física</h4>
+                    <ul>
+                        <li>Espacios amplios y despejados</li>
+                        <li>Mobiliario adaptable</li>
+                        <li>Señalización clara</li>
+                        <li>Iluminación adecuada</li>
+                    </ul>
+                </div>
+                <div class="guideline-card">
+                    <h4>Accesibilidad Cognitiva</h4>
+                    <ul>
+                        <li>Estructura clara y predecible</li>
+                        <li>Rutinas establecidas</li>
+                        <li>Apoyos visuales</li>
+                        <li>Organizadores gráficos</li>
+                    </ul>
+                </div>
+                <div class="guideline-card">
+                    <h4>Accesibilidad Digital</h4>
+                    <ul>
+                        <li>Plataformas accesibles</li>
+                        <li>Contenido con etiquetas alternativas</li>
+                        <li>Navegación intuitiva</li>
+                        <li>Compatibilidad con lectores de pantalla</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Objetivos de Aprendizaje</h2>
+            <ul class="checklist">
+                <li>Comprender los fundamentos teóricos y las bases neurocientíficas del DUA.</li>
+                <li>Analizar críticamente los tres principios del DUA y sus pautas específicas.</li>
+                <li>Diseñar planes de clase que incorporen estrategias DUA.</li>
+                <li>Evaluar y adaptar materiales didácticos siguiendo los principios del DUA.</li>
+                <li>Crear entornos de aprendizaje físicos y digitales accesibles.</li>
+                <li>Reflexionar sobre la propia práctica docente desde la perspectiva del DUA.</li>
+            </ul>
+
+            <h2>Actividades Prácticas</h2>
+            
+            <div class="strategy-card">
+                <h3>1. Análisis de Materiales con Lentes DUA</h3>
+                <p><strong>Objetivo:</strong> Desarrollar la capacidad de evaluar materiales educativos desde la perspectiva del DUA.</p>
+                <p><strong>Actividad:</strong> Seleccionar un material didáctico y analizarlo según los tres principios del DUA, identificando fortalezas y proponiendo mejoras.</p>
+            </div>
+
+            <div class="strategy-card">
+                <h3>2. Rediseño de una Actividad con Enfoque DUA</h3>
+                <p><strong>Objetivo:</strong> Aplicar los principios del DUA en el diseño de actividades de aprendizaje.</p>
+                <p><strong>Actividad:</strong> Tomar una actividad de enseñanza tradicional y rediseñarla incorporando múltiples formas de representación, acción/expresión e implicación.</p>
+            </div>
+
+            <div class="strategy-card">
+                <h3>3. Auditoría de Accesibilidad</h3>
+                <p><strong>Objetivo:</strong> Desarrollar habilidades para evaluar la accesibilidad de entornos de aprendizaje.</p>
+                <p><strong>Actividad:</strong> Realizar una auditoría de accesibilidad en un aula o espacio educativo, identificando barreras y proponiendo soluciones.</p>
+            </div>
+
+            <h2>Recursos Adicionales</h2>
+            
+            <div class="guidelines-grid">
+                <div class="guideline-card">
+                    <h4>Lecturas Recomendadas</h4>
+                    <ul>
+                        <li>CAST (2018). <em>Universal Design for Learning Guidelines version 2.2</em>.</li>
+                        <li>Rose, D. H., & Meyer, A. (2002). <em>Teaching Every Student in the Digital Age: Universal Design for Learning</em>.</li>
+                        <li>Alba Pastor, C. (2019). <em>Diseño Universal para el Aprendizaje: Educación para todos y prácticas de enseñanza inclusivas</em>.</li>
+                    </ul>
+                </div>
+                <div class="guideline-card">
+                    <h4>Herramientas Digitales</h4>
+                    <ul>
+                        <li><a href="https://udlguidelines.cast.org/" target="_blank" rel="noopener">Guía DUA del CAST</a></li>
+                        <li><a href="https://bookcreator.com/" target="_blank" rel="noopener">Book Creator</a> para crear libros digitales accesibles</li>
+                        <li><a href="https://learningtools.donjohnston.com/" target="_blank" rel="noopener">UDL Tech Toolkit</a></li>
+                    </ul>
+                </div>
+                <div class="guideline-card">
+                    <h4>Plantillas y Guías</h4>
+                    <ul>
+                        <li>Plantilla para planificación de clases con DUA</li>
+                        <li>Lista de verificación de accesibilidad en el aula</li>
+                        <li>Rúbrica para evaluar materiales didácticos con enfoque DUA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 2rem;">
+                <div class="example-title">Recuerde</div>
+                <p>El DUA no es una receta, sino un marco de referencia flexible que debe adaptarse a cada contexto educativo. La clave está en la planificación intencional que anticipe la diversidad del alumnado y ofrezca múltiples formas de acceder al aprendizaje, participar en él y demostrar lo aprendido.</p>
+            </div>
+        </div>
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

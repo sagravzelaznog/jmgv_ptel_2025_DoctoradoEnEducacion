@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferenciación y Nivelación Educativa - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Módulos */
+        .modules-container {
+            padding: 2rem 0;
+        }
+
+        .module {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .module-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .module-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .module-content {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .module.active .module-content {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Diferenciación y Nivelación Educativa</h1>
+            <p>Estrategias para atender la diversidad de niveles de aprendizaje en el aula y cerrar brechas educativas.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="modules-container">
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='modulos-diferenciacion/modulo1-fundamentos-diferenciacion.html';" style="cursor: pointer;">
+                    <h2>Módulo 1: Fundamentos de la Educación Diferenciada</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Principios de la educación diferenciada.</li>
+                        <li>Identificación de estilos de aprendizaje.</li>
+                        <li>Estrategias para reconocer diferentes ritmos de aprendizaje.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='modulos-diferenciacion/modulo2-estrategias-nivelacion.html';" style="cursor: pointer;">
+                    <h2>Módulo 2: Estrategias de Nivelación</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Diagnóstico de niveles de aprendizaje.</li>
+                        <li>Planeación de actividades de nivelación.</li>
+                        <li>Uso de recursos didácticos para diferentes niveles.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='modulos-diferenciacion/modulo3-evaluacion-diferenciada.html';" style="cursor: pointer;">
+                    <h2>Módulo 3: Evaluación Diferenciada</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Diseño de instrumentos de evaluación adaptados.</li>
+                        <li>Retroalimentación efectiva para diferentes niveles.</li>
+                        <li>Seguimiento del progreso individual.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header" onclick="window.location.href='modulos-diferenciacion/modulo4-implementacion-aula.html';" style="cursor: pointer;">
+                    <h2>Módulo 4: Implementación en el Aula</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Estrategias para grupos diversos.</li>
+                        <li>Gestión del tiempo en aulas con múltiples niveles.</li>
+                        <li>Casos de éxito y lecciones aprendidas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle para los módulos
+        document.addEventListener('DOMContentLoaded', function() {
+            const modules = document.querySelectorAll('.module');
+            
+            modules.forEach(module => {
+                const header = module.querySelector('.module-header');
+                const content = module.querySelector('.module-content');
+                const toggleIcon = header.querySelector('.toggle-icon');
+                
+                // Agregar evento de clic para alternar el módulo
+                header.addEventListener('click', (e) => {
+                    // Prevenir la navegación si se hace clic en el ícono de toggle
+                    if (!e.target.classList.contains('toggle-icon')) {
+                        // Cerrar todos los módulos
+                        modules.forEach(m => {
+                            if (m !== module) {
+                                m.classList.remove('active');
+                                m.querySelector('.module-content').style.display = 'none';
+                                m.querySelector('.toggle-icon').textContent = '+';
+                            }
+                        });
+                        
+                        // Alternar el módulo actual
+                        module.classList.toggle('active');
+                        
+                        // Mostrar/ocultar el contenido
+                        if (module.classList.contains('active')) {
+                            content.style.display = 'block';
+                            toggleIcon.textContent = '-';
+                        } else {
+                            content.style.display = 'none';
+                            toggleIcon.textContent = '+';
+                        }
+                    }
+                });
+            });
+            
+            // Abrir el primer módulo por defecto
+            if (modules.length > 0) {
+                modules[0].classList.add('active');
+                modules[0].querySelector('.module-content').style.display = 'block';
+                modules[0].querySelector('.toggle-icon').textContent = '-';
+            }
+        });
+    </script>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

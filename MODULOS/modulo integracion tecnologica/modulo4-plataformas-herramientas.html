@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Plataformas y Herramientas Gratuitas</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .module-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .module-content {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        .platform-card {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .tool-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tool-card .tool-link {
+            display: inline-block;
+            margin-top: auto;
+            padding-top: 1rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            border-top: 1px solid #eee;
+        }
+
+        .tool-card .tool-link:hover {
+            text-decoration: underline;
+        }
+
+        .platform-features {
+            margin: 1rem 0;
+            flex-grow: 1;
+        }
+
+        .platform-features ul {
+            margin: 0.5rem 0 0 1.5rem;
+        }
+
+        .platform-features li {
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .platform-features li:before {
+            content: "✓";
+            color: var(--success-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .use-case {
+            background: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .use-case h5 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .comparison-table th, 
+        .comparison-table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .comparison-table .feature-name {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .module-header {
+                margin: -1rem -1rem 1.5rem -1rem;
+                padding: 1rem;
+            }
+            
+            .module-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../integracion-tecnologica.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="module-header">
+            <h1>Módulo 4: Plataformas y Herramientas Gratuitas</h1>
+        </div>
+        
+        <div class="module-content">
+            <h2>Introducción</h2>
+            <p>Este módulo te presentará una variedad de plataformas y herramientas educativas gratuitas que puedes utilizar para enriquecer tu práctica docente, incluso en contextos con recursos limitados.</p>
+            
+            <div class="platform-card">
+                <h3>Plataformas de Gestión del Aprendizaje (LMS)</h3>
+                <p>Estas plataformas te permiten organizar contenido, actividades y evaluaciones en un solo lugar.</p>
+                
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <h4>📚 Google Classroom</h4>
+                        <div class="platform-features">
+                            <p>Plataforma de Google para gestionar clases virtuales.</p>
+                            <ul>
+                                <li>Creación de tareas y cuestionarios</li>
+                                <li>Foros de discusión</li>
+                                <li>Integración con Google Drive</li>
+                                <li>Comentarios en tiempo real</li>
+                            </ul>
+                        </div>
+                        <a href="https://classroom.google.com/" target="_blank" rel="noopener" class="tool-link">Acceder a Google Classroom →</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>🎓 Edmodo</h4>
+                        <div class="platform-features">
+                            <p>Red social educativa con funciones de aula virtual.</p>
+                            <ul>
+                                <li>Interfaz similar a redes sociales</li>
+                                <li>Biblioteca de recursos</li>
+                                <li>Cuestionarios y encuestas</li>
+                                <li>Comunicación con familias</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.edmodo.com/" target="_blank" rel="noopener" class="tool-link">Conocer Edmodo →</a>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>🏫 Moodle Cloud</h4>
+                        <div class="platform-features">
+                            <p>Versión gratuita del popular LMS Moodle.</p>
+                            <ul>
+                                <li>Hasta 50 usuarios</li>
+                                <li>200MB de almacenamiento</n>
+                                <li>Módulos de actividades</li>
+                                <li>Seguimiento de progreso</li>
+                            </ul>
+                        </div>
+                        <a href="https://moodle.com/cloud/" target="_blank" rel="noopener" class="tool-link">Probar Moodle Cloud →</a>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <h5>Ejemplo de Uso: Clase Híbrida con Google Classroom</h5>
+                    <p><strong>Objetivo:</strong> Gestionar una clase con estudiantes que alternan entre asistencia presencial y virtual.</p>
+                    <p><strong>Implementación:</strong></p>
+                    <ol>
+                        <li>Crear una clase en Google Classroom para cada grupo</li>
+                        <li>Publicar materiales de estudio semanales</li>
+                        <li>Crear tareas con fechas de entrega</li>
+                        <li>Utilizar el muro para anuncios y recordatorios</li>
+                        <li>Usar Google Meet para sesiones sincrónicas</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <h2>Herramientas de Evaluación y Retroalimentación</h2>
+            
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h4>📝 Google Forms</h4>
+                    <div class="platform-features">
+                        <p>Crea cuestionarios y encuestas con corrección automática.</p>
+                        <ul>
+                            <li>Diferentes tipos de preguntas</li>
+                            <li>Plantillas para educación</li>
+                            <li>Análisis automático de respuestas</li>
+                            <li>Integración con Hojas de Cálculo</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.google.com/forms/about/" target="_blank" rel="noopener" class="tool-link">Crear un formulario →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>🏆 Quizizz</h4>
+                    <div class="platform-features">
+                        <p>Plataforma de cuestionarios interactivos y juegos de aprendizaje.</p>
+                        <ul>
+                            <li>Miles de cuestionarios ya creados</li>
+                            <li>Modo en vivo o tarea</li>
+                            <li>Memes personalizados</li>
+                            <li>Reportes detallados</li>
+                        </ul>
+                    </div>
+                    <a href="https://quizizz.com/" target="_blank" rel="noopener" class="tool-link">Probar Quizizz →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>📊 Formative</h4>
+                    <div class="platform-features">
+                        <p>Evaluaciones formativas en tiempo real.</p>
+                        <ul>
+                            <li>Retroalimentación inmediata</li>
+                            <li>Dibujar y escribir respuestas</n>
+                            <li>Integración con Google Classroom</li>
+                            <li>Biblioteca de actividades</li>
+                        </ul>
+                    </div>
+                    <a href="https://www.formative.com/" target="_blank" rel="noopener" class="tool-link">Conocer Formative →</a>
+                </div>
+            </div>
+            
+            <h2>Herramientas de Colaboración</h2>
+            
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h4>👥 Padlet</h4>
+                    <div class="platform-features">
+                        <p>Muro colaborativo para compartir ideas y recursos.</p>
+                        <ul>
+                            <li>Diferentes formatos de presentación</li>
+                            <li>Comentarios y votos</li>
+                            <li>Subida de archivos</li>
+                            <li>Integración multimedia</li>
+                        </ul>
+                    </div>
+                    <a href="https://padlet.com/" target="_blank" rel="noopener" class="tool-link">Probar Padlet →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>📝 Jamboard</h4>
+                    <div class="platform-features">
+                        <p>Pizarra digital colaborativa de Google.</p>
+                        <ul>
+                            <li>Dibujo y escritura a mano</li>
+                            <li>Notas adhesivas</li>
+                            <li>Inserción de imágenes</li>
+                            <li>Colaboración en tiempo real</li>
+                        </ul>
+                    </div>
+                    <a href="https://jamboard.google.com/" target="_blank" rel="noopener" class="tool-link">Usar Jamboard →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>🌐 Wakelet</h4>
+                    <div class="platform-features">
+                        <p>Crea colecciones de recursos multimedia.</p>
+                        <ul>
+                            <li>Organización por temas</li>
+                            <li>Colaboración en equipo</li>
+                            <li>Incrustación en sitios web</li>
+                            <li>Perfiles de estudiante</li>
+                        </ul>
+                    </div>
+                    <a href="https://wakelet.com/" target="_blank" rel="noopener" class="tool-link">Explorar Wakelet →</a>
+                </div>
+            </div>
+            
+            <h2>Comparativa de Plataformas</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Google Classroom</th>
+                        <th>Edmodo</th>
+                        <th>Moodle Cloud</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-name">Máximo de usuarios</td>
+                        <td>Ilimitado (con G Suite for Education)</td>
+                        <td>Ilimitado</td>
+                        <td>Hasta 50 (versión gratuita)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Almacenamiento</td>
+                        <td>Ilimitado (para instituciones educativas)</td>
+                        <td>20GB</td>
+                        <td>200MB (versión gratuita)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Videollamadas</td>
+                        <td>✅ Google Meet integrado</td>
+                        <td>❌ No incluye</td>
+                        <td>✅ Con complementos</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Aplicación móvil</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-name">Idioma</td>
+                        <td>Múltiples</td>
+                        <td>Múltiples</td>
+                        <td>Múltiples</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>Actividades de Aprendizaje</h2>
+            
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h4>Actividad 1: Creación de un Aula Virtual</h4>
+                    <p>Crea un aula virtual en la plataforma de tu elección y diseña una actividad para tus estudiantes.</p>
+                    <p><strong>Entregable:</strong> Enlace al aula virtual y descripción de la actividad.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Actividad 2: Cuestionario Interactivo</h4>
+                    <p>Diseña un cuestionario interactivo sobre un tema de tu asignatura utilizando una de las herramientas presentadas.</p>
+                    <p><strong>Entregable:</strong> Enlace al cuestionario y justificación de la herramienta elegida.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Actividad 3: Recurso Colaborativo</h4>
+                    <p>Crea un recurso colaborativo utilizando una de las herramientas presentadas y compártelo con compañeros.</p>
+                    <p><strong>Entregable:</strong> Enlace al recurso y reflexión sobre su potencial educativo.</p>
+                </div>
+            </div>
+            
+            <h2>Recursos Adicionales</h2>
+            
+            <ul>
+                <li><a href="https://www.commonsense.org/education/" target="_blank" rel="noopener">Common Sense Education - Reseñas de herramientas educativas</a></li>
+                <li><a href="https://www.educatorstechnology.com/" target="_blank" rel="noopener">Educational Technology and Mobile Learning</a></li>
+                <li><a href="https://www.freetech4teachers.com/" target="_blank" rel="noopener">Free Technology for Teachers</a></li>
+                <li><a href="https://www.controlaltachieve.com/" target="_blank" rel="noopener">Control Alt Achieve - Ideas para Google en educación</a></li>
+            </ul>
+            
+            <h2>Evaluación</h2>
+            
+            <p>La evaluación de este módulo se realizará a través de:</p>
+            <ul>
+                <li>Aula virtual creada (40%)</li>
+                <li>Cuestionario interactivo (30%)</li>
+                <li>Recurso colaborativo (30%)</li>
+            </ul>
+        </div>
+        <a href="../integracion-tecnologica.html" class="back-button">← Volver al curso</a>
+    </div>
+
+    <footer style="background-color: var(--primary-color); text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

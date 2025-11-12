@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Colaboración y Apoyo Institucional</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --info-color: #3498db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .module-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .module-content {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .collab-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-top: 4px solid var(--accent-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        .collab-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .collab-card p {
+            flex-grow: 1;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .checklist li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .case-study {
+            background: #f8fafc;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .case-study h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.75rem;
+        }
+
+        .testimonial {
+            background: #fff8e1;
+            border-left: 4px solid var(--warning-color);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial:before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            left: 10px;
+            top: -10px;
+            color: rgba(0,0,0,0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            text-align: right;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .evaluation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .evaluation-table th, 
+        .evaluation-table td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        .evaluation-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .evaluation-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .module-header {
+                margin: -1rem -1rem 1.5rem -1rem;
+                padding: 1rem;
+            }
+            
+            .module-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .collaboration-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-header">
+            <h1>Módulo 4: Colaboración y Apoyo Institucional</h1>
+        </div>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            <div class="collaboration-grid">
+                <div class="collab-card">
+                    <div class="icon">🤝</div>
+                    <h3>Articulación Docente-Especialista</h3>
+                    <p>Estrategias para una colaboración efectiva entre docentes de aula y especialistas en educación especial.</p>
+                </div>
+                <div class="collab-card">
+                    <div class="icon">🌐</div>
+                    <h3>Redes de Apoyo</h3>
+                    <p>Construcción de redes internas y externas para sostener los procesos de inclusión educativa.</p>
+                </div>
+                <div class="collab-card">
+                    <div class="icon">📊</div>
+                    <h3>Seguimiento y Evaluación</h3>
+                    <p>Herramientas para el monitoreo y evaluación de los planes de inclusión institucionales.</p>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Articulación entre Docentes y Especialistas</h2>
+                <p>La colaboración efectiva entre docentes de aula y especialistas es fundamental para el éxito de la educación inclusiva. A continuación, se presentan estrategias clave para fortalecer esta articulación:</p>
+                
+                <div class="collaboration-grid">
+                    <div class="collab-card">
+                        <div class="icon">🗓️</div>
+                        <h3>Planificación Colaborativa</h3>
+                        <p>Estructura para la coordinación efectiva:</p>
+                        <ul class="checklist">
+                            <li>Reuniones quincenales de planificación</li>
+                            <li>Definición de roles y responsabilidades</li>
+                            <li>Co-diseño de adaptaciones curriculares</li>
+                            <li>Uso de plataformas colaborativas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">🔄</div>
+                        <h3>Intervención en el Aula</h3>
+                        <p>Modelos de trabajo conjunto:</p>
+                        <ul class="checklist">
+                            <li>Co-enseñanza (team teaching)</li>
+                            <li>Asesoramiento en el aula</li>
+                            <li>Observación y retroalimentación</li>
+                            <li>Talleres de capacitación mutua</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">📝</div>
+                        <h3>Seguimiento y Evaluación</h3>
+                        <p>Mecanismos de monitoreo:</p>
+                        <ul class="checklist">
+                            <li>Registros compartidos de avances</li>
+                            <li>Evaluaciones conjuntas</li>
+                            <li>Ajustes periódicos a las estrategias</li>
+                            <li>Documentación del proceso</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h4>Experiencia: Modelo de Apoyo en el Aula Regular</h4>
+                    <p><strong>Contexto:</strong> Escuela primaria con programa de inclusión para estudiantes con discapacidad intelectual.</p>
+                    <p><strong>Estrategia implementada:</strong> Sistema de apoyo integrado con los siguientes componentes:</p>
+                    <ul>
+                        <li>Dos horas semanales de planificación conjunta docente-especialista</li>
+                        <li>Uso de una carpeta compartida digital para el seguimiento de estudiantes</li>
+                        <li>Observaciones de aula recíprocas</li>
+                        <li>Reuniones mensuales con las familias</li>
+                    </ul>
+                    <p><strong>Resultados después de un año:</strong></p>
+                    <ul>
+                        <li>Mejora del 40% en los logros académicos de estudiantes con NEE</li>
+                        <li>Reducción del 60% en conductas disruptivas</li>
+                        <li>Mayor satisfacción del personal docente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Construcción de Redes de Apoyo para la Inclusión</h2>
+                
+                <div class="collaboration-grid">
+                    <div class="collab-card">
+                        <div class="icon">👥</div>
+                        <h3>Comité de Inclusión Escolar</h3>
+                        <p>Estructura y funciones:</p>
+                        <ul class="checklist">
+                            <li>Composición multidisciplinaria</li>
+                            <li>Reuniones mensuales</li>
+                            <li>Elaboración del PEI inclusivo</li>
+                            <li>Seguimiento de casos</li>
+                            <li>Propuestas de formación</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">👨‍👩‍👧‍👦</div>
+                        <h3>Red de Familias</h3>
+                        <p>Estrategias de participación:</p>
+                        <ul class="checklist">
+                            <li>Escuela para padres</li>
+                            <li>Grupos de apoyo entre familias</li>
+                            <li>Participación en adaptaciones</li>
+                            <li>Redes de acompañamiento</li>
+                            <li>Comunicación constante</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">🤝</div>
+                        <h3>Alianzas Estratégicas</h3>
+                        <p>Redes de apoyo externo:</p>
+                        <ul class="checklist">
+                            <li>Instituciones de salud</li>
+                            <li>ONGs especializadas</li>
+                            <li>Universidades</li>
+                            <li>Empresas inclusivas</li>
+                            <li>Redes de escuelas inclusivas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    "La creación de nuestra red de apoyo transformó la experiencia educativa de mi hijo. Ahora no solo cuenta con el apoyo de sus maestros, sino también de otros padres que entienden nuestros desafíos y celebran nuestros logros."
+                    <div class="testimonial-author">- Ana M., madre de un estudiante con TEA</div>
+                </div>
+
+                <h3>Guía para la Creación de una Red de Apoyo</h3>
+                <ol>
+                    <li><strong>Diagnóstico Institucional:</strong> Identificar necesidades y recursos existentes.</li>
+                    <li><strong>Convocatoria:</strong> Involucrar a todos los actores de la comunidad educativa.</li>
+                    <li><strong>Estructuración:</strong> Definir objetivos, roles y responsabilidades.</li>
+                    <li><strong>Plan de Acción:</strong> Establecer actividades, plazos y responsables.</li>
+                    <li><strong>Implementación:</strong> Poner en marcha las acciones planificadas.</li>
+                    <li><strong>Seguimiento:</strong> Evaluar resultados y realizar ajustes.</li>
+                </ol>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Evaluación y Seguimiento de la Inclusión Educativa</h2>
+                
+                <p>Un sistema efectivo de evaluación y seguimiento es fundamental para garantizar que las estrategias de inclusión estén cumpliendo sus objetivos y para realizar los ajustes necesarios.</p>
+                
+                <h3>Dimensiones Clave para la Evaluación</h3>
+                
+                <div class="collaboration-grid">
+                    <div class="collab-card">
+                        <div class="icon">📚</div>
+                        <h3>Procesos de Enseñanza-Aprendizaje</h3>
+                        <ul class="checklist">
+                            <li>Adecuaciones curriculares</li>
+                            <li>Estrategias didácticas</li>
+                            <li>Recursos y materiales</li>
+                            <li>Evaluación de aprendizajes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">👥</div>
+                        <h3>Participación y Convivencia</h3>
+                        <ul class="checklist">
+                            <li>Interacciones sociales</li>
+                            <li>Participación en actividades</li>
+                            <li>Clima escolar</li>
+                            <li>Resolución de conflictos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">🔄</div>
+                        <h3>Gestión Institucional</h3>
+                        <ul class="checklist">
+                            <li>Políticas inclusivas</li>
+                            <li>Formación docente</li>
+                            <li>Recursos y apoyos</li>
+                            <li>Trabajo en red</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Herramientas para el Seguimiento</h3>
+                
+                <div class="collaboration-grid">
+                    <div class="collab-card">
+                        <div class="icon">📊</div>
+                        <h3>Indicadores Cuantitativos</h3>
+                        <ul>
+                            <li>Asistencia y permanencia</li>
+                            <li>Rendimiento académico</li>
+                            <li>Participación en actividades</li>
+                            <li>Uso de apoyos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">📝</div>
+                        <h3>Instrumentos Cualitativos</h3>
+                        <ul>
+                            <li>Observación sistemática</li>
+                            <li>Entrevistas</li>
+                            <li>Grupos focales</li>
+                            <li>Portafolios</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collab-card">
+                        <div class="icon">🔄</div>
+                        <h3>Frecuencia de Evaluación</h3>
+                        <ul>
+                            <li>Seguimiento semanal</li>
+                            <li>Evaluación mensual</li>
+                            <li>Informe trimestral</li>
+                            <li>Evaluación anual</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Tabla de Seguimiento de Indicadores</h3>
+                
+                <table class="evaluation-table">
+                    <thead>
+                        <tr>
+                            <th>Dimensión</th>
+                            <th>Indicador</th>
+                            <th>Instrumento</th>
+                            <th>Frecuencia</th>
+                            <th>Responsable</th>
+                        </tr>
+                    </thead>
+                        <th>Instrumentos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Progreso del Estudiante</td>
+                        <td>Logros académicos, desarrollo de habilidades, participación</td>
+                        <td>Rúbricas, portafolios, observación sistemática</td>
+                    </tr>
+                    <tr>
+                        <td>Prácticas Docentes</td>
+                        <td>Aplicación de estrategias inclusivas, adecuaciones curriculares</td>
+                        <td>Autoevaluación, pares, encuestas a estudiantes</td>
+                    </tr>
+                    <tr>
+                        <td>Clima Escolar</td>
+                        <td>Convivencia, participación, accesibilidad</td>
+                        <td>Encuestas, grupos focales, observación</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Plan de Acción para la Inclusión</h2>
+            <ol>
+                <li>Diagnóstico de necesidades de la institución</li>
+                <li>Establecimiento de metas y objetivos</li>
+                <li>Asignación de responsabilidades</li>
+                <li>Desarrollo de cronograma</li>
+                <li>Implementación de acciones</li>
+                <li>Seguimiento y evaluación</li>
+                <li>Ajustes y mejoras continuas</li>
+            </ol>
+
+            <h2>Recursos Adicionales</h2>
+            <ul>
+                <li>Guía para la creación de comités de inclusión</li>
+                <li>Plantillas para planes de trabajo colaborativo</li>
+                <li>Instrumentos de evaluación de la inclusión educativa</li>
+                <li>Casos de estudio de escuelas inclusivas exitosas</li>
+            </ul>
+        </div>
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+    </div>
+    <footer >
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

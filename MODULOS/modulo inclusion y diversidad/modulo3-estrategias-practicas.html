@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Estrategias Prácticas de Inclusión</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .module-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .module-content {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        .strategy-card {
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .strategy-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .strategy-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .strategy-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .checklist li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .case-study {
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .case-study h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 0.5rem;
+        }
+
+        .scenario {
+            background: #fff8e1;
+            border-left: 4px solid var(--warning-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .example {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .module-header {
+                margin: -1rem -1rem 1.5rem -1rem;
+                padding: 1rem;
+            }
+            
+            .module-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+        
+        <div class="module-header">
+            <h1>Módulo 3: Estrategias Prácticas de Inclusión</h1>
+        </div>
+        
+        <div class="module-content">
+            <h2>Contenido del Módulo</h2>
+            <div class="strategy-grid">
+                <div class="strategy-item">
+                    <div class="strategy-icon">🔄</div>
+                    <h3>Ajustes Razonables</h3>
+                    <p>Modificaciones necesarias en el entorno educativo para garantizar la participación plena de todos los estudiantes.</p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon">📝</div>
+                    <h3>Adaptaciones Curriculares</h3>
+                    <p>Personalización de objetivos, contenidos y evaluación según las necesidades individuales.</p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon">👥</div>
+                    <h3>Trabajo Colaborativo</h3>
+                    <p>Estructuras de aprendizaje cooperativo que fomentan la interdependencia positiva.</p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon">⏱️</div>
+                    <h3>Ritmos de Aprendizaje</h3>
+                    <p>Estrategias para atender la diversidad de estilos y velocidades de aprendizaje.</p>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Ajustes Razonables en el Aula Inclusiva</h2>
+                <p>Los ajustes razonables son modificaciones y adaptaciones necesarias en los diferentes elementos del proceso educativo para garantizar que todos los estudiantes puedan participar plenamente en el aprendizaje.</p>
+                
+                <h3>Tipos de Ajustes Razonables</h3>
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h4>Físicos/Ambientales</h4>
+                        <ul class="checklist">
+                            <li>Ubicación preferente en el aula</li>
+                            <li>Mobiliario adaptado</li>
+                            <li>Iluminación y acústica adecuadas</li>
+                            <li>Señalización accesible</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>Comunicación</h4>
+                        <ul class="checklist">
+                            <li>Sistemas alternativos de comunicación</li>
+                            <li>Materiales en formatos accesibles</li>
+                            <li>Uso de pictogramas</li>
+                            <li>Lenguaje claro y sencillo</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>Organizativos</h4>
+                        <ul class="checklist">
+                            <li>Rutinas estructuradas</li>
+                            <li>Agendas visuales</li>
+                            <li>Tiempos flexibles</li>
+                            <li>Agrupamientos diversos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h4>Estudio de Caso: Ajustes para un estudiante con TEA</h4>
+                    <p><strong>Situación:</strong> Marcos, de 8 años, tiene diagnóstico de Trastorno del Espectro Autista (TEA) y presenta dificultades en la interacción social y en la comprensión de instrucciones verbales complejas.</p>
+                    <p><strong>Ajustes implementados:</strong></p>
+                    <ul>
+                        <li>Uso de pictogramas para la secuencia de actividades diarias</li>
+                        <li>Espacio de trabajo definido con marcadores visuales</li>
+                        <li>Anticipación de cambios en la rutina</li>
+                        <li>Instrucciones claras y por pasos</li>
+                        <li>Tiempo adicional para la realización de tareas</li>
+                    </ul>
+                    <p><strong>Resultado:</strong> Mejoró significativamente su autonomía y participación en el aula, reduciendo sus niveles de ansiedad.</p>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Adaptaciones Curriculares Significativas y No Significativas</h2>
+                
+                <h3>Adaptaciones No Significativas</h3>
+                <p>Modificaciones que no afectan a los objetivos ni a los criterios de evaluación básicos:</p>
+                <ul class="checklist">
+                    <li>Modificaciones en la metodología</li>
+                    <li>Cambios en la temporalización</li>
+                    <li>Adecuación de materiales</li>
+                    <li>Modificaciones en la evaluación (formato, tiempo, instrumentos)</li>
+                </ul>
+
+                <h3>Adaptaciones Significativas</h3>
+                <p>Modificaciones que afectan a los elementos prescriptivos del currículo:</p>
+                <ul class="checklist">
+                    <li>Eliminación de contenidos esenciales</li>
+                    <li>Modificación de objetivos generales</li>
+                    <li>Cambios en los criterios de evaluación</li>
+                </ul>
+
+                <div class="scenario">
+                    <h4>Escenario Práctico: Adaptación Curricular</h4>
+                    <p><strong>Asignatura:</strong> Ciencias Naturales - Tema: Los Ecosistemas</p>
+                    <p><strong>Objetivo general:</strong> Comprender las relaciones entre los seres vivos y su entorno.</p>
+                    
+                    <p><strong>Adaptación para un estudiante con dificultades de aprendizaje:</strong></p>
+                    <p><strong>1. En los contenidos:</strong><br>
+                    - Priorizar conceptos clave<br>
+                    - Reducir la cantidad de vocabulario técnico<br>
+                    - Usar ejemplos concretos y cercanos</p>
+                    
+                    <p><strong>2. En la metodología:</strong><br>
+                    - Presentar la información de forma visual y concreta<br>
+                    - Realizar experimentos sencillos<br>
+                    - Usar organizadores gráficos</p>
+                    
+                    <p><strong>3. En la evaluación:</strong><br>
+                    - Evaluar los conceptos clave de forma oral<br>
+                    - Permitir el uso de material de apoyo<br>
+                    - Evaluar el proceso, no solo el resultado final</p>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Trabajo Colaborativo y Tutoría entre Pares</h2>
+                
+                <h3>Estructuras de Aprendizaje Cooperativo</h3>
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h4>1. Rompecabezas (Jigsaw)</h4>
+                        <p>Cada estudiante se convierte en experto en una parte del contenido y lo enseña a su grupo.</p>
+                        <p><strong>Ventaja:</strong> Fomenta la responsabilidad individual y la interdependencia positiva.</p>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>2. Grupo de Investigación</h4>
+                        <p>Pequeños grupos investigan diferentes aspectos de un tema y comparten hallazgos.</p>
+                        <p><strong>Ventaja:</strong> Desarrolla habilidades de investigación y presentación.</p>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>3. Tutoría entre Pares</h4>
+                        <p>Estudiantes con mayor dominio apoyan a sus compañeros.</p>
+                        <p><strong>Ventaja:</strong> Refuerza el aprendizaje de ambos estudiantes.</p>
+                    </div>
+                </div>
+
+                <h3>Implementación Práctica</h3>
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h4>Roles en el Grupo</h4>
+                        <ul>
+                            <li><strong>Coordinador/a:</strong> Organiza el trabajo</li>
+                            <li><strong>Secretario/a:</strong> Toma notas</li>
+                            <li><strong>Portavoz:</strong> Expone al grupo</li>
+                            <li><strong>Supervisor/a:</strong> Verifica la comprensión</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>Evaluación del Trabajo en Equipo</h4>
+                        <ul>
+                            <li>Rúbricas de evaluación</li>
+                            <li>Autoevaluación</li>
+                            <li>Evaluación entre pares</li>
+                            <li>Diario de aprendizaje</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h4>Experiencia: Aprendizaje Cooperativo en Matemáticas</h4>
+                    <p><strong>Contexto:</strong> Aula de 5° grado con estudiantes de diversos niveles en matemáticas.</p>
+                    <p><strong>Estrategia implementada:</strong> Grupos heterogéneos de 4 estudiantes trabajando en la resolución de problemas matemáticos.</p>
+                    <p><strong>Resultados:</strong></p>
+                    <ul>
+                        <li>Aumento del 35% en la resolución correcta de problemas</li>
+                        <li>Mayor participación de estudiantes con dificultades</li>
+                        <li>Mejora en el clima del aula</li>
+                        <li>Desarrollo de habilidades sociales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Estrategias para Atender a Diferentes Ritmos de Aprendizaje</h2>
+                
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h3>1. Agrupamiento Flexible</h3>
+                        <ul>
+                            <li>Grupos homogéneos por nivel</li>
+                            <li>Grupos heterogéneos para tutoría entre pares</li>
+                            <li>Grupos de interés</li>
+                            <li>Grupos temporales para proyectos específicos</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>2. Actividades Multinivel</h3>
+                        <ul>
+                            <li>Mismo objetivo, distinto nivel de complejidad</li>
+                            <li>Distintos objetivos, mismo tema</li>
+                            <li>Actividades de ampliación y refuerzo</li>
+                            <li>Rincones de aprendizaje</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>3. Tiempo Flexible</h3>
+                        <ul>
+                            <li>Contratos de aprendizaje</li>
+                            <li>Estaciones de aprendizaje</li>
+                            <li>Listas de tareas</li>
+                            <li>Rutinas de trabajo autónomo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Ejemplo de Actividad Multinivel: La Célula</h3>
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h4>Nivel Básico</h4>
+                        <ul>
+                            <li>Identificar las partes de la célula</li>
+                            <li>Relacionar cada orgánulo con su función básica</li>
+                            <li>Dibujar una célula animal y vegetal</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>Nivel Intermedio</h4>
+                        <ul>
+                            <li>Comparar célula animal y vegetal</li>
+                            <li>Explicar la función de cada orgánulo</li>
+                            <li>Relacionar la estructura con la función</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>Nivel Avanzado</h4>
+                        <ul>
+                            <li>Investigar enfermedades relacionadas con el mal funcionamiento de orgánulos</li>
+                            <li>Diseñar un modelo 3D interactivo</li>
+                            <li>Crear una presentación sobre avances en biología celular</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Objetivos de Aprendizaje</h2>
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h3>Conocimientos</h3>
+                        <ul class="checklist">
+                            <li>Comprender los principios del Diseño Universal para el Aprendizaje (DUA)</li>
+                            <li>Conocer las características de los diferentes estilos y ritmos de aprendizaje</li>
+                            <li>Identificar las barreras al aprendizaje y la participación</li>
+                            <li>Conocer las diferentes estrategias de enseñanza inclusiva</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>Habilidades</h3>
+                        <ul class="checklist">
+                            <li>Diseñar e implementar ajustes razonables</li>
+                            <li>Elaborar adaptaciones curriculares significativas y no significativas</li>
+                            <li>Organizar actividades de aprendizaje colaborativo</li>
+                            <li>Aplicar estrategias diferenciadas</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>Actitudes</h3>
+                        <ul class="checklist">
+                            <li>Valorar la diversidad como un elemento enriquecedor</li>
+                            <li>Desarrollar una actitud empática hacia las necesidades educativas especiales</li>
+                            <li>Fomentar la colaboración frente a la competencia</li>
+                            <li>Mantener altas expectativas para todos los estudiantes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-card">
+                <h2>Actividades Prácticas</h2>
+                
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h3>1. Análisis de Casos Reales</h3>
+                        <p><strong>Objetivo:</strong> Desarrollar la capacidad de identificar necesidades educativas y proponer ajustes.</p>
+                        <p><strong>Desarrollo:</strong></p>
+                        <ol>
+                            <li>Se presentan casos reales de estudiantes con diferentes necesidades</li>
+                            <li>En pequeños grupos, se analizan las barreras al aprendizaje</li>
+                            <li>Se proponen ajustes razonables y adaptaciones</li>
+                            <li>Puesta en común y discusión</li>
+                        </ol>
+                        <p><strong>Producto:</strong> Informe con propuesta de intervención</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h3>2. Diseño de Secuencia Didáctica Inclusiva</h3>
+                        <p><strong>Objetivo:</strong> Aplicar los principios del DUA en el diseño de actividades.</p>
+                        <p><strong>Desarrollo:</strong></p>
+                        <ol>
+                            <li>Seleccionar un contenido curricular</li>
+                            <li>Diseñar actividades que respondan a los tres principios DUA</li>
+                            <li>Incluir estrategias de evaluación diversificadas</li>
+                            <li>Presentar la secuencia al grupo</li>
+                        </ol>
+                        <p><strong>Producto:</strong> Secuencia didáctica con materiales</p>
+                    </div>
+                    
+                    <div class="strategy-item">
+                        <h3>3. Simulación de Aula Inclusiva</h3>
+                        <p><strong>Objetivo:</strong> Vivenciar diferentes roles en un aula diversa.</p>
+                        <p><strong>Desarrollo:</strong></p>
+                        <ol>
+                            <li>Se asignan roles a los participantes (estudiante con NEE, docente, compañeros)</li>
+                            <li>Se simula una clase con diferentes estrategias inclusivas</li>
+                            <li>Reflexión sobre la experiencia</li>
+                            <li>Propuestas de mejora</li>
+                        </ol>
+                        <p><strong>Producto:</strong> Registro reflexivo de la experiencia</p>
+                    </div>
+                </div>
+                
+                <h3>Recursos Adicionales</h3>
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <h4>Lecturas Recomendadas</h4>
+                        <ul>
+                            <li>CAST (2018). <em>Pautas sobre el Diseño Universal para el Aprendizaje</em>.</li>
+                            <li>Echeita, G. (2017). <em>Aprendizaje cooperativo y educación inclusiva</em>.</li>
+                            <li>Tomlinson, C. A. (2015). <em>El aula diversificada</em>.</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h4>Recursos Digitales</h4>
+                        <ul>
+                            <li><a href="https://www.cast.org/" target="_blank" rel="noopener">CAST - Centro para la Tecnología Especial Aplicada</a></li>
+                            <li><a href="https://www.inclusioneducativa.org/" target="_blank" rel="noopener">Portal de Educación Inclusiva</a></li>
+                            <li><a href="https://www.udlcenter.org/" target="_blank" rel="noopener">UDL Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="../inclusion-diversidad.html" class="back-button">← Volver al curso</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

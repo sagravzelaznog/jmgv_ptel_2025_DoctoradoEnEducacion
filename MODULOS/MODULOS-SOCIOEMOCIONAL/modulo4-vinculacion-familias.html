@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Vinculación con las Familias - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .module-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .module-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .module-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .learning-objectives {
+            background-color: #f0f8ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .strategy-section {
+            margin: 3rem 0;
+        }
+
+        .strategy-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .practical-activity, .case-study {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .practical-activity h4, .case-study h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .reflection-activity {
+            background-color: #f5f9f5;
+            border-left: 4px solid #2ecc71;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .reflection-activity ol {
+            padding-left: 1.5rem;
+        }
+
+        .reflection-activity li {
+            margin-bottom: 1rem;
+        }
+
+        .step-by-step {
+            background-color: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .checklist {
+            background-color: #f0f7ff;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem 1rem 3rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .checklist:before {
+            content: "✓";
+            position: absolute;
+            left: 1rem;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .toolbox {
+            background-color: #f8f5ff;
+            border-left: 4px solid #9b59b6;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .toolbox h4 {
+            color: #8e44ad;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .strategy-card, .practical-activity, .case-study, .step-by-step, .checklist, .toolbox {
+                padding: 1rem;
+            }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Módulo 4: Vinculación con las Familias</h1>
+            <p>Doctorado en Educación - Desarrollo Socioemocional y Convivencia Escolar</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../desarrollo-socioemocional.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="module-content">
+            <div class="learning-objectives">
+                <h2>Objetivos de Aprendizaje</h2>
+                <p>Al finalizar este módulo, serás capaz de:</p>
+                <ul>
+                    <li>Diseñar estrategias efectivas para involucrar a las familias en el desarrollo socioemocional de los estudiantes.</li>
+                    <li>Proporcionar herramientas prácticas a las familias para el acompañamiento socioemocional en casa.</li>
+                    <li>Establecer y fortalecer redes de apoyo comunitario que beneficien a los estudiantes y sus familias.</li>
+                    <li>Implementar estrategias de comunicación asertiva que promuevan una relación escuela-familia positiva.</li>
+                </ul>
+            </div>
+
+            <section class="strategy-section">
+                <h2>Estrategias para la Vinculación Familiar</h2>
+                
+                <article class="strategy-card">
+                    <h3>Comunicación Efectiva Escuela-Familia</h3>
+                    <p>La comunicación constante y clara es la base de una relación sólida entre la escuela y las familias:</p>
+                    
+                    <div class="step-by-step">
+                        <h4>Plan de Comunicación Integral</h4>
+                        <ol>
+                            <li><strong>Diagnóstico inicial:</strong> Identificar canales de comunicación preferidos por las familias.</li>
+                            <li><strong>Frecuencia establecida:</strong> Calendario de comunicaciones regulares (boletines, mensajes, reuniones).</li>
+                            <li><strong>Contenido relevante:</strong> Información clara, concisa y accesible sobre el desarrollo socioemocional.</li>
+                            <li><strong>Retroalimentación:</strong> Mecanismos para que las familias compartan sus inquietudes y sugerencias.</li>
+                        </ol>
+                    </div>
+
+                    <div class="practical-activity">
+                        <h4>Actividad: Diseño de un Boletín Familiar Mensual</h4>
+                        <p><strong>Objetivo:</strong> Crear un boletín informativo que fortalezca el vínculo escuela-familia.</p>
+                        <p><strong>Secciones sugeridas:</strong></p>
+                        <ul>
+                            <li>Mensaje del docente: Logros y retos del grupo.</li>
+                            <li>Enfoque socioemocional: Habilidad del mes con actividades para realizar en casa.</li>
+                            <li>Agenda familiar: Fechas importantes y eventos escolares.</li>
+                            <li>Rincón de preguntas: Respuestas a dudas frecuentes de las familias.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Talleres para Padres: Estrategias Prácticas</h3>
+                    <p>Los talleres son espacios valiosos para el aprendizaje y la reflexión conjunta:</p>
+                    
+                    <div class="toolbox">
+                        <h4>Guía para Talleres Efectivos</h4>
+                        <p><strong>Estructura recomendada:</strong></p>
+                        <ol>
+                            <li><strong>Bienvenida:</strong> Dinámica rompehielos relacionada con el tema.</li>
+                            <li><strong>Marco teórico:</strong> Exposición breve y accesible (máximo 15 minutos).</li>
+                            <li><strong>Actividad vivencial:</strong> Ejercicio práctico que permita experimentar los conceptos.</li>
+                            <li><strong>Reflexión grupal:</strong> Espacio para compartir experiencias y aprendizajes.</li>
+                            <li><strong>Compromisos:</strong> Acciones concretas para implementar en casa.</li>
+                        </ol>
+                    </div>
+
+                    <div class="practical-activity">
+                        <h4>Ejemplo de Taller: "Manejo de Emociones en Casa"</h4>
+                        <p><strong>Duración:</strong> 90 minutos</p>
+                        <p><strong>Materiales:</strong> Hojas, lápices, tarjetas con emociones, espejos pequeños</p>
+                        <p><strong>Desarrollo:</strong></p>
+                        <ol>
+                            <li><strong>Dinámica inicial:</strong> "El espejo de las emociones" - Expresar emociones frente a un espejo.</li>
+                            <li><strong>Presentación:</strong> Importancia de validar las emociones en la crianza.</li>
+                            <li><strong>Actividad práctica:</strong> Creación de un "termómetro emocional" familiar.</li>
+                            <li><strong>Role-playing:</strong> Situaciones cotidianas y respuestas emocionales.</li>
+                        </ol>
+                    </div>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Herramientas para el Acompañamiento en Casa</h2>
+                
+                <article class="strategy-card">
+                    <h3>Rutinas Familiares para el Desarrollo Socioemocional</h3>
+                    
+                    <div class="checklist">
+                        <p><strong>Rutinas recomendadas para implementar en casa:</strong></p>
+                        <ul>
+                            <li><strong>El momento de las noticias:</strong> Espacio diario para compartir cómo estuvo el día.</li>
+                            <li><strong>La caja de los logros:</strong> Registrar y celebrar pequeños éxitos familiares.</li>
+                            <li><strong>El rincón de la calma:</strong> Espacio físico para regular emociones.</li>
+                            <li><strong>Reunión familiar semanal:</strong> Espacio para planificar y resolver conflictos.</li>
+                        </ul>
+                    </div>
+
+                    <div class="practical-activity">
+                        <h4>Guía Rápida: Actividades por Edad</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="background: #f0f7ff; padding: 1rem; border-radius: 8px;">
+                                <h5 style="margin-top: 0; color: #2980b9;">Preescolar (3-5 años)</h5>
+                                <ul style="padding-left: 1.2rem;">
+                                    <li>Juegos de imitación de emociones</li>
+                                    <li>Cuentos con personajes que expresan sentimientos</li>
+                                    <li>Tabla de rutinas con imágenes</li>
+                                </ul>
+                            </div>
+                            <div style="background: #f0f7ff; padding: 1rem; border-radius: 8px;">
+                                <h5 style="margin-top: 0; color: #2980b9;">Primaria (6-12 años)</h5>
+                                <ul style="padding-left: 1.2rem;">
+                                    <li>Diario de emociones</li>
+                                    <li>Juegos de mesa cooperativos</li>
+                                    <li>Proyectos familiares de servicio</li>
+                                </ul>
+                            </div>
+                            <div style="background: #f0f7ff; padding: 1rem; border-radius: 8px;">
+                                <h5 style="margin-top: 0; color: #2980b9;">Adolescentes (13-18 años)</h5>
+                                <ul style="padding-left: 1.2rem;">
+                                    <li>Debates sobre temas de actualidad</li>
+                                    <li>Metas personales y familiares</li>
+                                    <li>Voluntariado comunitario</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="strategy-card">
+                    <h3>Tecnologías que Apoyan el Desarrollo Socioemocional</h3>
+                    
+                    <div class="toolbox">
+                        <h4>Recursos Digitales Recomendados</h4>
+                        <p><strong>Aplicaciones para el manejo emocional:</strong></p>
+                        <ul>
+                            <li><strong>MoodMeter:</strong> Registro diario de emociones</li>
+                            <li><strong>Smiling Mind:</strong> Meditaciones guiadas para todas las edades</li>
+                            <li><strong>ClassDojo:</strong> Comunicación escuela-familia</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Canales de YouTube educativos:</strong></p>
+                        <ul>
+                            <li>El Monstruo de Colores (cuentos animados)</li>
+                            <li>Educación Emocional para Familias (consejos prácticos)</li>
+                            <li>Yoga para Niños (ejercicios de relajación)</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Redes de Apoyo Comunitario</h2>
+                
+                <article class="strategy-card">
+                    <h3>Mapeo y Activación de Recursos Comunitarios</h3>
+                    
+                    <div class="step-by-step">
+                        <h4>Pasos para Crear una Red de Apoyo</h4>
+                        <ol>
+                            <li><strong>Identificación:</strong> Mapear organizaciones, servicios y profesionales en la comunidad.</li>
+                            <li><strong>Caracterización:</strong> Definir el tipo de apoyo que ofrecen (asesoría, talleres, atención psicológica, etc.).</li>
+                            <li><strong>Vinculación:</strong> Establecer acuerdos de colaboración.</li>
+                            <li><strong>Difusión:</strong> Crear un directorio accesible para las familias.</li>
+                            <li><strong>Evaluación:</strong> Monitorear la efectividad de las alianzas.</li>
+                        </ol>
+                    </div>
+
+                    <div class="practical-activity">
+                        <h4>Actividad: Feria de Servicios Comunitarios</h4>
+                        <p><strong>Objetivo:</strong> Conectar a las familias con los recursos disponibles en su comunidad.</p>
+                        <p><strong>Organización:</strong></p>
+                        <ul>
+                            <li>Invitar a organizaciones locales a participar con stands informativos.</li>
+                            <li>Organizar charlas cortas (TED-style) sobre temas relevantes.</li>
+                            <li>Incluir actividades interactivas para niños y adultos.</li>
+                            <li>Proporcionar material informativo para llevar a casa.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="strategy-section">
+                <h2>Comunicación Asertiva con las Familias</h2>
+                
+                <article class="strategy-card">
+                    <h3>Estrategias para Reuniones Efectivas</h3>
+                    
+                    <div class="checklist">
+                        <p><strong>Antes de la reunión:</strong></p>
+                        <ul>
+                            <li>Enviar agenda con anticipación</li>
+                            <li>Preparar ejemplos concretos del estudiante</li>
+                            <li>Elegir un espacio adecuado y privado</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Durante la reunión:</strong></p>
+                        <ul>
+                            <li>Iniciar con aspectos positivos</li>
+                            <li>Usar lenguaje claro y evitar jerga educativa</li>
+                            <li>Fomentar la participación activa de la familia</li>
+                            <li>Establecer acuerdos y próximos pasos</li>
+                        </ul>
+                    </div>
+
+                    <div class="practical-activity">
+                        <h4>Técnica: Comunicación No Violenta (CNV)</h4>
+                        <p>Fórmula de 4 pasos para comunicaciones difíciles:</p>
+                        <ol>
+                            <li><strong>Observación:</strong> Describir la situación sin juicios ("He notado que...")</li>
+                            <li><strong>Sentimiento:</strong> Expresar cómo te hace sentir ("Me siento...")</li>
+                            <li><strong>Necesidad:</strong> Identificar la necesidad no cubierta ("Porque necesito/valoro...")</li>
+                            <li><strong>Petición:</strong> Hacer una petición concreta y realista ("¿Estarías dispuesto a...?")</li>
+                        </ol>
+                    </div>
+                </article>
+            </section>
+
+            <section class="reflection-activity">
+                <h2>Actividad de Integración y Reflexión</h2>
+                <p>Para consolidar tu aprendizaje, desarrolla el siguiente plan de acción:</p>
+                <ol>
+                    <li>Selecciona una estrategia de vinculación familiar que implementarás en tu contexto educativo.</li>
+                    <li>Identifica los recursos necesarios y posibles obstáculos.</li>
+                    <li>Establece indicadores para evaluar el impacto de tu intervención.</li>
+                    <li>Reflexiona: ¿Cómo esta estrategia contribuye al desarrollo socioemocional de tus estudiantes?</li>
+                </ol>
+                <p style="margin-top: 1rem;"><strong>Recuerda:</strong> La participación familiar es un proceso que requiere tiempo, consistencia y adaptación a las necesidades específicas de cada comunidad educativa.</p>
+            </section>
+        </div>
+    </div>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusión y Atención a la Diversidad en el Aula - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Módulos */
+        .modules-container {
+            padding: 2rem 0;
+        }
+
+        .module {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .module-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .module-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .module-content {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .module.active .module-content {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Inclusión y Atención a la Diversidad en el Aula</h1>
+            <p>Fortalecer las capacidades institucionales y docentes para brindar una atención educativa pertinente a la diversidad, reconociendo las Necesidades Educativas Especiales (NEE) y eliminando las barreras para el aprendizaje y la participación (BAP).</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="modules-container">
+            <div class="module">
+                <div class="module-header">
+                    <h2>Módulo 1: Marco Conceptual de la Educación Inclusiva</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>De la integración a la inclusión: Un cambio de paradigma.</li>
+                        <li>Identificación de Barreras para el Aprendizaje y la Participación (BAP) en el contexto escolar.</li>
+                        <li>Mitos y realidades de las Necesidades Educativas Especiales (NEE).</li>
+                    </ul>
+                    <a href="modulo inclusion y diversidad/modulo1-marco-conceptual.html" class="back-button">Ver contenido</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header">
+                    <h2>Módulo 2: Diseño Universal para el Aprendizaje (DUA)</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Principios del DUA: Múltiples formas de presentación, acción/expresión e implicación.</li>
+                        <li>Cómo planificar una clase aplicando los principios del DUA.</li>
+                        <li>Creación de ambientes de aprendizaje accesibles (físicos y cognitivos).</li>
+                    </ul>
+                    <a href="modulo inclusion y diversidad/modulo2-diseno-universal.html" class="back-button">Ver contenido</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header">
+                    <h2>Módulo 3: Estrategias Prácticas de Inclusión</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Ajustes razonables y adaptaciones curriculares.</li>
+                        <li>Trabajo colaborativo y tutoría entre pares.</li>
+                        <li>Estrategias para diferentes ritmos de aprendizaje.</li>
+                    </ul>
+                    <a href="modulo inclusion y diversidad/modulo3-estrategias-practicas.html" class="back-button">Ver contenido</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-header">
+                    <h2>Módulo 4: Colaboración y Apoyo Institucional</h2>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Cómo articular el trabajo del docente de aula con los servicios de educación especial.</li>
+                        <li>Creación de redes de apoyo dentro de la escuela.</li>
+                        <li>Evaluación y seguimiento de los planes de inclusión.</li>
+                    </ul>
+                    <a href="modulo inclusion y diversidad/modulo4-colaboracion-apoyo.html" class="back-button">Ver contenido</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle para los módulos
+        document.addEventListener('DOMContentLoaded', function() {
+            const modules = document.querySelectorAll('.module');
+            
+            modules.forEach(module => {
+                const header = module.querySelector('.module-header');
+                const content = module.querySelector('.module-content');
+                const toggleIcon = module.querySelector('.toggle-icon');
+                
+                header.addEventListener('click', () => {
+                    const isActive = module.classList.contains('active');
+                    
+                    // Cerrar todos los módulos
+                    modules.forEach(m => {
+                        m.classList.remove('active');
+                        m.querySelector('.module-content').style.display = 'none';
+                        m.querySelector('.toggle-icon').textContent = '+';
+                    });
+                    
+                    // Abrir el módulo clickeado si no estaba activo
+                    if (!isActive) {
+                        module.classList.add('active');
+                        content.style.display = 'block';
+                        toggleIcon.textContent = '-';
+                    }
+                });
+            });
+            
+            // Abrir el primer módulo por defecto
+            if (modules.length > 0) {
+                modules[0].classList.add('active');
+                modules[0].querySelector('.module-content').style.display = 'block';
+                modules[0].querySelector('.toggle-icon').textContent = '-';
+            }
+        });
+    </script>
+
+    <footer style="background-color: var(--primary-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

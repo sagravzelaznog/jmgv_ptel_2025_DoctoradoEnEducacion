@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Creación de Recursos Didácticos Digitales</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .module-header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .module-content {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+        .resource-card {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .tool-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .tool-card .tool-link {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .tool-card .tool-link:hover {
+            text-decoration: underline;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .example-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .example-item h5 {
+            margin: 0 0 0.5rem 0;
+            color: var(--secondary-color);
+        }
+
+        .tip-box {
+            background: #e8f4fc;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .module-header {
+                margin: -1rem -1rem 1.5rem -1rem;
+                padding: 1rem;
+            }
+            
+            .module-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../integracion-tecnologica.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="module-header">
+            <h1>Módulo 3: Creación de Recursos Didácticos Digitales</h1>
+        </div>
+        
+        <div class="module-content">
+            <h2>Introducción</h2>
+            <p>En este módulo aprenderás a crear materiales didácticos digitales efectivos y atractivos que respondan a las necesidades de aprendizaje de tus estudiantes, incluso en contextos con recursos limitados.</p>
+            
+            <div class="resource-card">
+                <h3>Principios para la Creación de Recursos Digitales</h3>
+                <p>Antes de comenzar a crear, es importante considerar estos principios fundamentales:</p>
+                
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <h4>Accesibilidad</h4>
+                        <p>Diseña pensando en la diversidad de estudiantes, incluyendo aquellos con necesidades educativas especiales.</p>
+                        <ul>
+                            <li>Contraste adecuado</li>
+                            <li>Fuentes legibles</li>
+                            <li>Texto alternativo en imágenes</li>
+                            <li>Subtítulos en videos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Usabilidad</h4>
+                        <p>Haz que tus recursos sean fáciles de usar y navegar.</p>
+                        <ul>
+                            <li>Navegación intuitiva</li>
+                            <li>Instrucciones claras</li>
+                            <li>Tiempos de carga óptimos</li>
+                            <li>Compatibilidad con diferentes dispositivos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Diseño Universal para el Aprendizaje (DUA)</h4>
+                        <p>Incorpora múltiples formas de:</p>
+                        <ul>
+                            <li>Representación de la información</li>
+                            <li>Expresión del aprendizaje</li>
+                            <li>Compromiso con el contenido</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Herramientas para Crear Recursos Didácticos</h2>
+            
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h4>Presentaciones Interactivas</h4>
+                    <p>Crea presentaciones que vayan más allá de las diapositivas tradicionales.</p>
+                    <p><strong>Herramientas recomendadas:</strong></p>
+                    <ul>
+                        <li>Google Slides</li>
+                        <li>Microsoft PowerPoint</li>
+                        <li>Canva</li>
+                        <li>Genially</li>
+                    </ul>
+                    <a href="https://www.canva.com/" target="_blank" rel="noopener" class="tool-link">Probar Canva →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Videos Educativos</h4>
+                    <p>Crea videos cortos y efectivos para explicar conceptos complejos.</p>
+                    <p><strong>Herramientas recomendadas:</strong></p>
+                    <ul>
+                        <li>Loom (grabación de pantalla)</li>
+                        <li>iMovie o Windows Movie Maker</li>
+                        <li>Powtoon (animaciones)</li>
+                        <li>Canva Video</li>
+                    </ul>
+                    <a href="https://www.loom.com/" target="_blank" rel="noopener" class="tool-link">Probar Loom →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Actividades Interactivas</h4>
+                    <p>Diseña ejercicios y evaluaciones interactivas.</p>
+                    <p><strong>Herramientas recomendadas:</strong></p>
+                    <ul>
+                        <li>Liveworksheets</li>
+                        <li>Wordwall</li>
+                        <li>LearningApps</li>
+                        <li>Quizizz</li>
+                    </ul>
+                    <a href="https://www.liveworksheets.com/" target="_blank" rel="noopener" class="tool-link">Probar Liveworksheets →</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Infografías y Materiales Visuales</h4>
+                    <p>Crea recursos visuales atractivos y efectivos.</p>
+                    <p><strong>Herramientas recomendadas:</strong></p>
+                    <ul>
+                        <li>Canva</li>
+                        <li>Piktochart</li>
+                        <li>Easel.ly</li>
+                        <li>Google Drawings</li>
+                    </ul>
+                    <a href="https://www.canva.com/" target="_blank" rel="noopener" class="tool-link">Probar Canva →</a>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <h4>Consejo Práctico: La Regla 5-5-5</h4>
+                <p>Para mantener la atención de los estudiantes, intenta seguir esta regla en tus presentaciones:</p>
+                <ul>
+                    <li><strong>5 minutos</strong> de explicación del docente</li>
+                    <li><strong>5 minutos</strong> de interacción con el recurso digital</li>
+                    <li><strong>5 minutos</strong> de discusión o actividad práctica</li>
+                </ul>
+            </div>
+            
+            <h2>Curación de Contenidos</h2>
+            <p>No es necesario crear todo desde cero. Aprende a encontrar, seleccionar y organizar recursos educativos de calidad que ya existen en la web.</p>
+            
+            <h3>Fuentes Confiables de Recursos Educativos:</h3>
+            
+            <div class="example-grid">
+                <div class="example-item">
+                    <h5>Recursos Generales</h5>
+                    <ul>
+                        <li>Educ.ar (Argentina)</li>
+                        <li>Colombia Aprende</li>
+                        <li>Educarchile</li>
+                        <li>INTEF (España)</li>
+                    </ul>
+                </div>
+                
+                <div class="example-item">
+                    <h5>Videos Educativos</h5>
+                    <ul>
+                        <li>Khan Academy</li>
+                        <li>Educatina</li>
+                        <li>UnProfesor</li>
+                        <li>YouTube Edu</li>
+                    </ul>
+                </div>
+                
+                <div class="example-item">
+                    <h5>Imágenes y Recursos Visuales</h5>
+                    <ul>
+                        <li>Pixabay</li>
+                        <li>Unsplash</li>
+                        <li>Freepik</li>
+                        <li>Flaticon</li>
+                    </ul>
+                </div>
+                
+                <div class="example-item">
+                    <h5>Plataformas de Recursos</h5>
+                    <ul>
+                        <li>Tiching</li>
+                        <li>Procomún</li>
+                        <li>Ceibal (Uruguay)</li>
+                        <li>MeDiviertoAprendiendo (México)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="resource-card">
+                <h3>Guía para Evaluar Recursos Digitales</h3>
+                <p>Antes de utilizar o adaptar un recurso, evalúa su calidad con estos criterios:</p>
+                
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <h4>Calidad del Contenido</h4>
+                        <ul>
+                            <li>¿La información es precisa y actualizada?</li>
+                            <li>¿El nivel es apropiado para mis estudiantes?</li>
+                            <li>¿Está libre de sesgos y estereotipos?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Aspectos Pedagógicos</h4>
+                        <ul>
+                            <li>¿Fomenta el aprendizaje activo?</li>
+                            <li>¿Incluye retroalimentación?</li>
+                            <li>¿Permite la diferenciación?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <h4>Factores Técnicos</h4>
+                        <ul>
+                            <li>¿Es accesible en diferentes dispositivos?</li>
+                            <li>¿Funciona sin conexión a Internet?</li>
+                            <li>¿Es fácil de usar?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Actividades de Aprendizaje</h2>
+            
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h4>Actividad 1: Diseño de un Recurso Digital</h4>
+                    <p>Crea un recurso digital (presentación interactiva, video, infografía) para un tema de tu asignatura.</p>
+                    <p><strong>Entregable:</strong> Enlace al recurso creado y breve reflexión sobre cómo lo utilizarás en clase.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Actividad 2: Curación de Contenidos</h4>
+                    <p>Selecciona y organiza recursos digitales para una unidad temática.</p>
+                    <p><strong>Entregable:</strong> Colección de al menos 5 recursos con una breve descripción de cada uno y cómo los integrarás.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Actividad 3: Adaptación de un Recurso</h4>
+                    <p>Toma un recurso existente y adáptalo para hacerlo más accesible o efectivo.</p>
+                    <p><strong>Entregable:</strong> Versión original y versión adaptada, con explicación de los cambios realizados.</p>
+                </div>
+            </div>
+            
+            <h2>Recursos Adicionales</h2>
+            
+            <ul>
+                <li><a href="https://www.edutopia.org/" target="_blank" rel="noopener">Edutopia - Recursos para educación con tecnología</a></li>
+                <li><a href="https://www.commonsense.org/education/" target="_blank" rel="noopener">Common Sense Education - Reseñas de herramientas educativas</a></li>
+                <li><a href="https://practicaledtech.com/" target="_blank" rel="noopener">Practical Ed Tech - Ideas para integrar tecnología</a></li>
+                <li><a href="https://www.iste.org/" target="_blank" rel="noopener">ISTE - Estándares de tecnología educativa</a></li>
+            </ul>
+            
+            <h2>Evaluación</h2>
+            
+            <p>La evaluación de este módulo se realizará a través de:</p>
+            <ul>
+                <li>Recurso digital creado (40%)</li>
+                <li>Colección de recursos curados (30%)</li>
+                <li>Adaptación de recurso existente (30%)</li>
+            </ul>
+        </div>
+        <a href="../integracion-tecnologica.html" class="back-button">← Volver al curso</a>
+    </div>
+
+    <footer style="background-color: var(--primary-color); text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p>&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+</body>
+</html>

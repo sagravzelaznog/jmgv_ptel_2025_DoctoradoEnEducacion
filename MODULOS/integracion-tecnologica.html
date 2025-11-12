@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración Pedagógica de la Tecnología - Doctorado en Educación</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .course-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Módulos */
+        .modules-container {
+            padding: 2rem 0;
+        }
+
+        .module {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .module-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .module-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .module-content {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .module-content ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+        }
+
+        .module-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .module.active .module-content {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .course-header h1 {
+                font-size: 2rem;
+            }
+            
+            .module-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <div class="container">
+            <h1>Integración Pedagógica de la Tecnología</h1>
+            <p>Desarrolla competencias para el uso pedagógico de las tecnologías educativas, superando las barreras de falta de conectividad estable o escasez de equipo.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../index.html" class="back-button">← Volver al inicio</a>
+        
+        <div class="modules-container">
+            <div class="module">
+                <a href="modulo integracion tecnologica/modulo1-mentalidad-digital.html" class="module-header"  >
+                    <h2>Módulo 1: Mentalidad Digital: Más Allá del Recurso</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>El "uso pedagógico" vs. el "uso instrumental" de las TIC</li>
+                        <li>Modelos de integración tecnológica (SAMR, TPACK)</li>
+                        <li>Competencias digitales docentes</li>
+                    </ul>
+                    <a href="modulo integracion tecnologica/modulo1-mentalidad-digital.html" class="btn" style="display: inline-block; margin-top: 1rem; background-color: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">Ver módulo completo</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <a href="modulo integracion tecnologica/modulo2-estrategias-lowtech.html" class="module-header">
+                    <h2>Módulo 2: Estrategias "Low-Tech" y "Offline"</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Modelo de "Estaciones de rotación" con 1 o 2 computadoras</li>
+                        <li>Software y aplicaciones que funcionan sin conectividad estable</li>
+                        <li>Uso del celular como herramienta de creación y no solo de consumo (BYOD)</li>
+                    </ul>
+                    <a href="modulo integracion tecnologica/modulo2-estrategias-lowtech.html" class="btn" style="display: inline-block; margin-top: 1rem; background-color: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">Ver módulo completo</a>
+                </div>
+            </div>
+
+            <div class="module">
+                <a href="modulo integracion tecnologica/modulo3-creacion-recursos.html" class="module-header">
+                    <h2>Módulo 3: Creación de Recursos Didácticos Digitales</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Creación de material didáctico interactivo (presentaciones, videos cortos, guías)</li>
+                        <li>Curación de contenidos: Dónde encontrar recursos de calidad</li>
+                        <li>Respuesta a la necesidad de más y mejores materiales</li>
+                        <span class="toggle-icon">→</span>
+                    </a>
+                    <div class="module-content">
+                        <h3>Contenido:</h3>
+                        <ul>
+                            <li>Plataformas educativas gratuitas</li>
+                            <li>Herramientas de evaluación en línea</li>
+                            <li>Recursos colaborativos para el aprendizaje</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="module">
+                <a href="modulo integracion tecnologica/modulo4-plataformas-herramientas.html" class="module-header">
+                    <h2>Módulo 4: Plataformas y Herramientas Gratuitas</h2>
+                    <span class="toggle-icon">→</span>
+                </a>
+                <div class="module-content">
+                    <h3>Contenido:</h3>
+                    <ul>
+                        <li>Plataformas educativas gratuitas</li>
+                        <li>Herramientas de evaluación en línea</li>
+                        <li>Recursos colaborativos para el aprendizaje</li>
+                    </ul>
+                    <a href="modulo integracion tecnologica/modulo4-plataformas-herramientas.html" class="btn" style="display: block; margin: 1rem auto; background-color: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none;">Ver módulo completo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: var(--primary-color); text-align: center; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <p style="color: white;">&copy; JMGV-PTEL-2025. TODOS LOS DERECHOS RESERVADOS</p>
+        </div>
+    </footer>
+<script>
+
+        // Toggle para los módulos
+        document.addEventListener('DOMContentLoaded', function() {
+            const modules = document.querySelectorAll('.module');
+            
+            modules.forEach(module => {
+                const header = module.querySelector('.module-header');
+                const content = module.querySelector('.module-content');
+                const toggleIcon = module.querySelector('.toggle-icon');
+                
+                header.addEventListener('click', () => {
+                    const isActive = module.classList.contains('active');
+                    
+                    // Cerrar todos los módulos
+                    modules.forEach(m => {
+                        m.classList.remove('active');
+                        m.querySelector('.module-content').style.display = 'none';
+                        m.querySelector('.toggle-icon').textContent = '+';
+                    });
+                    
+                    // Abrir el módulo clickeado si no estaba activo
+                    if (!isActive) {
+                        module.classList.add('active');
+                        content.style.display = 'block';
+                        toggleIcon.textContent = '-';
+                    }
+                });
+            });
+            
+            // Abrir el primer módulo por defecto
+            if (modules.length > 0) {
+                modules[0].classList.add('active');
+                modules[0].querySelector('.module-content').style.display = 'block';
+                modules[0].querySelector('.toggle-icon').textContent = '-';
+            }
+        });
+    </script>
+
+    
+</body>
+</html>
